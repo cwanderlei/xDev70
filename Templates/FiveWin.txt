@@ -1,0 +1,34 @@
+!
+!text=FW Window
+!#Declaração de uma WINDOW com Fivewin
+!\%1=Edittext,Título da Janela:,0,0,0,0,Window  
+!\%2=Edittext,Variável final (Objeto):,0,0,0,0,  
+!\%3=Edittext,Largura em pixels:,0,0,0,0,  
+!\%4=Edittext,Altura em pixels:,0,0,0,0,  
+DEFINE WINDOW \%2 ;  
+ FROM 00, 00 TO \%4, \%3 PIXEL;  
+ TITLE "\%1"  
+  
+ \<  
+ \%2:Center()  
+  
+ ACTIVATE WINDOW \%2  
+!
+!text=FW Dialog
+!#Declaração de uma DIALOG com recurso em Fivewin
+!\%1=Edittext,Variável final (Objeto):,0,0,0,0,  
+!\%2=Edittext,Informe o nome do recurso:,0,0,0,0,  
+DEFINE DIALOG \%1 ;  
+ RESOURCE "\%2" ;  
+  
+ \<  
+  
+ ACTIVATE DIALOG \%1 CENTER  
+!
+!text=FW Get
+!#Redefinição de um GET com recurso em Fivewin
+!\%1=Edittext,Variável final (Objeto):,0,0,0,0,  
+!\%2=Edittext,Variável com dados à serem manipulados:,0,0,0,0,  
+!\%3=Edittext,Informe o ID do recurso:,0,0,0,0,  
+REDEFINE GET \%1 VAR \%2 ;  
+ ID \%3  

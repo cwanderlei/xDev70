@@ -1,0 +1,70 @@
+<!--
+### Standard xDev Config - Layout v1.5 #########
+#                                              #
+# Created @ 16/6/2006 19:52:45                 #
+#                                              #
+# xDevStudio Project - xdev@kssoftware.com.br  #
+################################################
+-->
+<compiler name="Harbour HwGUI">
+   <option icon="Icons.icl,9">
+   <option source="HwGUI.xCompiler.prg">
+   <option depends=".prg, .c, .obj, .rc, .res">
+   <option onbuild="OnBuild">
+   <option compiler="harbour.exe">
+
+   <parameters>
+      /* Opçoes do compilador */
+      <option fFlagA="/A - auto declarar como MEMVAR"         default="Não" select="Sim,Não" values="/A," hint="Declara automaticamente os símbolos não definidos como MEMVAR">
+      <option fFlagB="/B - Usar depurador?"                   default="Não" select="Sim,Não" values="/B," hint="Habilita o DEBUG em seu aplicativo, que poderá ser invocado, teclando-se ALT+D">
+      <option fFlagL="/L - Excluir número de  linhas"         default="Não" select="Sim,Não" values="/L," hint="Exclui a referência interna dos números de linhas dos arquivos deste projeto">
+      <option fFlagM="/M - Compilação individual dos PRGs"    default="Não" select="Sim,Não" values="/M," hint="Determina (quando desativado) que o arquivo principal deve ser compilado junto com os arquivos PRGs referenciados com o comando DO. Se ativado todos os arquivos serão compilados separadamente.">
+      <option fFlagN="/N - Não definir função inicial autom." default="Não" select="Sim,Não" values="/N," hint="Faz com que não seja incluída a função inicial em cada arquivo compilado neste projeto">
+      <option fFlagP="/P - Gerar arquivo pré-processado"      default="Não" select="Sim,Não" values="/P," hint="Informa se um arquivo pre-processado (.PPO) deve ser gerado ou nao.">      
+      <option fFlagZ="/Z - Suprimir optimização .AND./.OR."   default="Não" select="Sim,Não" values="/Z," hint="Desabilita a optimização de campos booleanos">
+
+      <option fUseUPX="Compactar com UPX?"                    default="Não" select="Sim,Não" hint="Compacta o aplicativo atual com UPX (http://upx.sourceforge.net/). O UPX é um compressor de arquivos executáveis gratuito, com alta-performance para diversos formatos executáveis. Consegue uma relação excelente de compressão e seus executáveis não sofrem nenhum dano.">
+      <option fForceCON="Forçar app. console?"                default="Não" select="Sim,Não" hint="Força a exibição da janela de console mesmo para um aplicativo gráfico">
+      <option fForceCompileAll="Forçar compilação completa?"  default="Não" select="Sim,Não" hint="Força a xDev Studio a compilar todos os módulos de seu projeto sempre. Por padrao a xDev Studio recompila apenas os arquivos que foram alterados a menos que este parametro esteja setado como SIM, então todos os módulos serão recompilados sempre.">
+      <option fUseHBDLL="Usa HB.DLL?"                         default="Não" select="Sim,Não" hint="Habilita o uso da biblioteca dinâmica (HARBOUR.DLL) em seu aplicativo. Lembre-se que talvez seja necessário incluir o arquivo MAINWIN.C da pasta SOURCE do [x]HB para o correto funcionamento de sua aplicação.">
+      <option fUseMT="Habilitar MT"                           default="Não" select="Sim,Não" values="MT," hint="Habilita ou não a compilação multi thread">
+      <option fInstallLIB="Copiar para a pasta LIB?"          default="Não" select="Sim,Não" hint="Especifica que quando a xDev compilar com sucesso um projeto que gere um arquivo *.LIB o mesmo deve ser copiado para a pasta LIB do seu compilador.">
+
+      <option fMiscOption1="Flags do Harbour"                 hint="Permite especificar parâmetros adicionais para o compilador Harbour">
+      <option fMiscOption2="Flags do Compilador C"            hint="Permite especificar parâmetros adicionais para o compilador BCC ou GCC">
+      <option fMiscOption3="Flags do Linker"                  hint="Permite especificar parâmetros adicionais para o compilador Linker ou MinGW">
+
+      <option RDD1="Rdd SQL LIB?"                             default="Não" select="Sim,Não" hint="Linka junto ao aplicativo as LIBs para suporte ao RDD DBFCDX">
+      <option RDD2="Rdd DBFCDX?"                              default="Não" select="Sim,Não" hint="Linka junto ao aplicativo as LIBs para suporte ao RDD DBFCDX">
+      <option RDD3="Rdd ADS?"                                 default="Não" select="Sim,Não" hint="Linka junto ao aplicativo as LIBs para suporte ao RDD ADS">
+      <option RDD4="ODBC Libs?"                               default="Não" select="Sim,Não" hint="Linka junto ao aplicativo as LIBs para suporte às funções de ODBC">
+
+      <option CustomLIBs="LIBs customizadas?"                 select="Sim,Não" default="Não" hint="Determina que nenhum arquivo *.LIB será incluido por padrao no script do projeto, mas apenas aquelas que você adicionar">
+      <option CustomDefines="Defines"                         hint="Define as diretrivas #DEFINE de pré-processamento para todos os módulos deste PROJETO com este SCRIPT">
+      <option Linker="Linker"                                 default="Borland" select="Borland, MinGW"  hint="Especifica o lineditor para gerar o seu projeto">
+
+      /* Opçoes específicas da hwGUI */
+      <option fUseHwGUIDLL="Usa hwGUI.DLL?"                   default="Não" select="Sim,Não" hint="Habilita o uso da biblioteca dinâmica hwGUI.DLL em seu aplicativo.">
+   </parameters>
+
+   /* 
+    * Os arquivos que poderemos processar ...
+    */
+    
+   /*                *.PRG                                           */ 
+   <extension file=".prg" output=".c" group="Módulos" onbuild="OnFilePRG">
+      <option PRG_Defines="Defines" hint="Define uma ou mais diretrivas #DEFINE de pre-processamento específicas para este ARQUIVO">
+      <option PRG_DisableDebug="Disable Debug" default="Não" select="Sim,Não" hint="Desabilita a opção de DEBUG para este arquivo em específico">
+   </extension>
+
+   /*                *.C                                             */
+   <extension file=".c" output=".obj" group="Módulos" onbuild="OnFileC">
+      <option PRG_Defines="Defines" hint="Define uma ou mais diretrivas #DEFINE de pre-processamento específicas para este ARQUIVO">
+      <option PRG_DisableDebug="Disable Debug" default="Não" select="Sim,Não" hint="Desabilita a opção de DEBUG para este arquivo em específico">
+   </extension>                                 
+
+   /*                *.RC                                            */
+   <extension file=".rc" output=".res" group="Recursos" onbuild="OnFileRC">
+      <option PRG_Defines="Defines" hint="Define uma ou mais diretrivas #DEFINE de pre-processamento específicas para este ARQUIVO">
+   </extension>
+</compiler>

@@ -1,0 +1,41 @@
+<!--
+### Standard xDev Config - Layout v1.5 #########
+#                                              #
+# Created @ 16/6/2006 19:52:45                 #
+#                                              #
+# xDevStudio Project - xdev@kssoftware.com.br  #
+################################################
+-->
+<compiler name="Clipper 5 & Blinker / Rtlink">
+   <option icon="Icons.icl,1">
+   <option source="ClipperBlinker.xCompiler.prg">
+   <option depends=".prg, .obj">
+   <option onbuild="OnBuild">
+   <option compiler="Clipper.exe">
+
+   <parameters>
+      /* Opçoes do compilador */
+      <option fMemvar="/A - auto declarar como MEMVAR"         default="Não" select="Sim,Não" values="/A," hint="Declara automaticamente os símbolos não definidos como MEMVAR">
+      <option  fDebug="/B - Usar depurador?"                   default="Não" select="Sim,Não" values="/B," hint="Habilita o DEBUG em seu aplicativo, que poderá ser invocado, teclando-se ALT+D">
+      <option fNoLine="/L - Excluir número de  linhas"         default="Não" select="Sim,Não" values="/L," hint="Exclui a referência interna dos números de linhas dos arquivos deste projeto">
+      <option fOnlyIt="/M - Compilação individual dos PRGs"    default="Não" select="Sim,Não" values="/M," hint="Determina (quando desativado) que o arquivo principal deve ser compilado junto com os arquivos PRGs referenciados com o comando DO. Se ativado todos os arquivos serão compilados separadamente.">
+      <option fNoStrt="/N - Não definir função inicial autom." default="Não" select="Sim,Não" values="/N," hint="Faz com que não seja incluída a função inicial em cada arquivo compilado neste projeto">
+      <option fMakPPO="/P - Gerar arquivo pré-processado"      default="Não" select="Sim,Não" values="/P," hint="Informa se um arquivo pre-processado (.PPO) deve ser gerado ou nao.">      
+      <option  fNoOpt="/Z - Suprimir optimização .AND./.OR."   default="Não" select="Sim,Não" values="/Z," hint="Desabilita a optimização de campos booleanos">
+      <option fMiscOption="Flags do Compilador"                hint="Permite especificar parâmetros adicionais para o compilador">
+      <option CustomDefines="Defines"                          hint="Define as diretrivas #DEFINE de pré-processamento para todos os módulos deste PROJETO">
+      <option Linker="Linker"                                  default="Blinker" select="Blinker, Rtlink"  hint="Especifica o lineditor para gerar o seu projeto">
+   </parameters>
+
+   /* Os arquivos que poderemos processar */
+   <extension file=".prg" output=".obj" group="Sources" onbuild="OnFilePRG">
+      <option PRG_Defines="Defines" hint="Define uma ou mais diretrivas #DEFINE de pre-processamento específicas para este ARQUIVO">
+      <option PRG_DisableDebug="Disable Debug" default="Não" select="Sim,Não" hint="Desabilita a opção de DEBUG para este arquivo em específico">
+   </extension>
+
+   /* Outros arquivos de somenos importância */
+   <extension file=".obj" group="Objects">
+   <extension file=".lib" group="Libraries">
+   <extension file=".ch"  group="Headers">
+   <extension file=".dll" group="Dinamic Link Libraries">
+</compiler>

@@ -1,0 +1,554 @@
+/*
+ * xHarbour & Harbour function list, by Vailton Renato
+ * 25/5/2007 00:14:11
+ */
+AAdd( <aArray>, <xValue> ) -> xValue 
+Abs( <nExpression> ) -> nPositive 
+AChoice( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], <acItems>, [<aSelectable>], [<cUserFunc>], [<nFirstItem>], [<nFirstRow>] ) -> nSelectedItem 
+AClone( <aArray> ) -> aClone 
+ACopy( <aSource>, <aTarget>, [<nSourceStart>], [<nCount>], [<nTargetStart>] ) -> aTarget 
+ADel( <aArray>, <nElement>, [<lShrink>] ) -> aArray 
+ADir( [<cFileMask>], [<aName>], [<aSize>], [<aDate>], [<aTime>], [<aAttr>] ) -> nDirEnries 
+AEval( <aArray>, <bBlock>, [<nStart>], [<nCount>] ) -> aArray 
+AFields( [<aFieldName>], [<aFieldType>], [<aFieldLen>], [<aFieldDec>] ) -> nCount 
+AFill( <aArray>, <expression>, [<nStart>], [<nCount>] ) -> aArray 
+AIns( <aArray>, <nElement>, [<xValue>], [<lGrow>] ) -> aArray 
+ALenAlloc( <aArray> ) -> nElements 
+Alert( <xMessage>, [<aOptions>], [<cColor>], [<nDelay>] ) -> nChoice 
+Alias( [<nWorkArea>] ) -> cAlias 
+AllTrim( <cString> ) -> cTrimmed 
+AltD( [<nAction>] ) -> NIL 
+AmPm( <cTime> ) -> cFormattedTime 
+Array( <nDim1> [, <nDimN, ...>] ) -> aArray 
+Ascan( <aArray>, <xbSearch>, [<nStart>], [<nCount>], [<lExact>], [<lASCII>] ) -> nElement 
+ASC( <cCharacter> ) -> nAsciiCode 
+ASizeAlloc( <aArray>, <nCount> ) -> aArray 
+ASize( <aArray>, <nCount> ) -> aArray 
+ASort( <aArray>, [<nStart>], [<nCount>], [<bSort>] ) -> aArray 
+ATail( <aArray> ) -> xValue 
+At( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) -> nPos 
+Bin2I( <cInteger> ) -> nNumber 
+Bin2L( <cInteger> ) -> nNumber 
+Bin2U( <cInteger> ) -> nNumber 
+Bin2W( <cInteger> ) -> nNumber 
+BlobDirectExport( <nBlobID>, <cTargetFile>, [<nMode>] ) -> lSuccess 
+BlobDirectGet( <nBlobID>, [<nStart>], [<nCount>] ) -> xBlobData 
+BlobDirectImport( <nOldBlobID>, <cSourceFile> ) -> nNewBlobID 
+BlobDirectPut( <nOldblobID>, <xBlobData> ) -> nNewblobID 
+BlobExport( <nFieldPos>, <cTargetFile>, [<nMode>] ) -> lSuccess 
+BlobGet( <nFieldPos>, [<nStart>], [<nCount>] ) -> xBlobData 
+BlobImport( <nFieldPos>, <cSourceFile> ) -> lSuccess 
+BlobRootDelete( ) -> lSuccess 
+BlobRootGet( ) -> xBlobData 
+BlobRootLock( ) -> lSuccess 
+BlobRootPut( <xBlobData> ) -> lSuccess 
+BlobRootUnlock( ) -> NIL 
+BoF( ) -> lBeginOfFile 
+Break( <Expression> ) -> NIL 
+Browse( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> lOk 
+CDoW( <dDate> ) -> cDayName 
+Chr( <nAsciiCode> ) -> cCharacter 
+CMonth( <dDate> ) -> cMonthName 
+ColorSelect( <nColorIndex> ) -> NIL 
+Col( ) -> nColPos 
+ConvToAnsiCP( <cOEM_String> ) -> cANSI_String 
+ConvToOemCP( <cANSI_String> ) -> cOEM_String 
+CStr( <xValue> ) -> cString 
+CtoD( <cDateString> ) -> dDate 
+CurDir( [<cDrive>] ) -> cDirPath 
+CurDrive( [<cNewDrive>] ) -> cOldDrive 
+Date( ) -> dDate 
+Days( <nSeconds> ) -> nDays 
+Day( <dDate> ) -> nDay 
+DbAppend( [<lUnlockRecords>] ) -> NIL 
+DbClearFilter( ) -> NIL 
+DbClearIndex( ) -> NIL 
+DbClearRelation( ) -> NIL 
+DbCloseAll( ) -> NIL 
+DbCloseArea( ) -> NIL 
+DbCommitAll( ) -> NIL 
+DbCommit( ) -> NIL 
+DbCopyExtStruct( <cDatabaseExt> ) -> lSuccess 
+DbCopyStruct( <cDatabase>, [<aFieldList>] ) -> NIL 
+DbCreateIndex( <cIndexFile>, <cIndexExpr>, [<bIndexExpr>], [<lUnique>], [<cIndexName>] ) -> NIL 
+DbCreate( <cDatabase>, <aStructure>, [<cDriver>], [<lNewArea>], [<cAlias>] ) -> NIL 
+DbDelete( ) -> NIL 
+DbEdit( [<nTop>] , [<nLeft>] , [<nBottom>], [<nRight>] , [<aColumns>], [<bcUserFunc>], [<xSayPictures>], [<xColumnHeaders>], [<xHeadingSep>], [<xColumnSep>], [<xFootingSep>], [<xColumnFootings>], [<xColumnPreBlock>], [<xColumnPostBlock>] ) -> NIL 
+DbEval( <bBlock> , [<bForCondition>], [<bWhileCondition>], [<nNextRecords>], [<nRecord>], [<lRest>] ) -> NIL 
+DbFieldInfo( <nInfo>, <nFieldPos> ) -> xFieldInfo 
+DbFileGet( <nFieldPos>, <cTargetFile>, <nMode> ) -> lSuccess 
+DbFilePut( <nFieldPos>, <cSourceFile> [, <Mode>] ) -> lSuccess 
+DbFilter( ) -> cFilter 
+Dbf( ) -> <cAliasName> 
+DbGoBottom( ) -> NIL 
+DbGoTop( ) -> NIL 
+DbGoto( <xRecno> ) -> NIL 
+DbInfo( <nDefine>, [<xNewSetting>] ) -> xCurrentSetting 
+DbOrderInfo( <nDefine> , [<cIndexFile>] , [<nOrder_or_cIndexName>], [<xNewSetting>] ) -> xCurrentSetting 
+DbRecall( ) -> NIL 
+DbRecordInfo( <nDefine>, [<nRecord>], [<xNewSetting>] ) -> xOldSetting 
+DbReindex( ) -> NIL 
+DbRelation( <nRelation> ) -> cLinkExpression 
+DbRLockList( ) -> aLockedRecords 
+DbRLock( [<xRecno>] ) -> lSuccess 
+DbRSelect( <nRelation> ) -> nWorkArea 
+DbRUnlock( [<xRecno>] ) -> NIL 
+DbSeek( <xValue>, [<lSoftSeek>], [<lFindLast>] ) -> lFound 
+DbSelectArea( <WorkArea> ) -> NIL 
+DbSetDriver( [<cRddName>] ) -> cPreviousRDD 
+DbSetFilter( <bFilter>, [<cFilter>] ) -> NIL 
+DbSetIndex( <cIndexFile> ) -> NIL 
+DbSetOrder( <nIndexPos> ) -> NIL 
+DbSetRelation( <Alias>, <bRelation>, <cRelation>, [<lScoped>] ) -> NIL 
+DbSkipper( <nSkipRequest> ) -> nSkipResult 
+DbSkip( [<nRecords>] ) -> NIL 
+DbStruct( ) -> aStructure 
+DbTableExt( ) -> cFileExtension 
+DbUnlockAll( ) -> NIL 
+DbUnlock( ) -> NIL 
+DbUseArea( [<lNewArea>], [<cRddName>], <cDatabase>, [<cAlias>], [<lShared>], [<lReadonly>], [<cCodePage>], [<nConnection>] ) -> NIL 
+DefPath( ) -> cDefaultPath 
+Deleted( ) -> lIsDeleted 
+Descend( <xValue> ) -> xDescend 
+DevOutPict( <expression>, <cPicture>, [<cColorString>] ) -> NIL 
+DevOut( <expression>, [<cColorString>], [<nRow>], [<nCol>] ) -> NIL 
+DevPos( <nRow>, <nCol> ) -> NIL 
+DirChange( <cDirectory> ) -> nOSError 
+DirectoryRecurse( <cDirSpec>, [<cAttributes>] ) -> aDirectory 
+Directory( <cDirSpec>, [<cAttributes>] ) -> aDirectory 
+DirRemove( <cDirectory> ) -> nOSError 
+DiskChange( <cDrive> ) -> lSuccess 
+DiskName( ) -> cDrive 
+DiskSpace( [<nDrive>], [<nType>] ) -> nBytes 
+DispBegin( ) -> NIL 
+DispBox( <nTop>, <nLeft>, <nBottom>, <nRight>, [<cnBoxString>], [<cColor>] ) -> NIL 
+DispCount( ) -> nDispCount 
+DispEnd( ) -> NIL 
+DispOutAtSetPos( [<lNewSetting>] ) -> lOldSetting 
+DispOutAt( <nRow>, <nCol>, <expression>, [<cColor>], [<lSetPos>] ) -> NIL 
+DispOut( <expression>, [<cColor>] ) -> NIL 
+DllCall( <cDllFile_OR_nDllHandle>, [<nCallingConvention>], <cFuncName_OR_nOrdinal>, [<xParams>] ) -> nResult 
+DllExecuteCall( <pCallTemplate>, <xParamsN>] ) -> nResult 
+DllLoad( <cDLLFileName> ) -> nDllHandle 
+DllPrepareCall( <cDllFile_OR_nDllHandle>, [<nCallingConvention>], <cFuncName_OR_nOrdinal> ) -> pCallTemplate 
+DllUnload( <nDllHandle> ) -> lSuccess 
+DosError( [<nNewErrorCode>] ) -> nOsErrorCode 
+DoW( <dDate> ) -> nDayOfWeek 
+DtoC( <dDate>) -> cDateString 
+DtoS( <dDate>) -> cYYYYMMDD 
+ElapTime( <cStartTime>, <cEndTime> ) -> cElapsedTime 
+Empty( <expression> ) -> lIsEmpty 
+Eof( ) -> lIsEndOfFile 
+ErrorBlock( [<bErrorBlock>] ) -> bLastErrorBlock 
+ErrorLevel( [<nNewExitCode>] ) -> nCurrentExitCode 
+ErrorNew( [<cSubSystem> ], [<nGenCode> ], [<nSubCode> ], [<cOperation> ], [<cDescription>], {<aArgs> ], [<cModuleName> ], [<cProcName> ], [<nProcLine> ] ) -> oError 
+ErrorSys( <bDefaultErrorBlock> ) -> NIL 
+Eval( <bBlock>, [<xValue> ] ) -> xReturn 
+Exp( <nExponent> ) -> nAntiLogarithm 
+FCharCount( <cFileName> ) -> nCharCount 
+FClose( <nFileHandle> ) -> lSuccess 
+FCount( ) -> nFieldCount 
+FCreate( <cFileName>, [<nFileAttr>] ) -> nFileHandle 
+FErase( <cFileName> ) -> nSuccess 
+FError( ) -> nErrorCode 
+FieldBlock( <cFieldName> ) -> bFieldBlock 
+FieldDec( <nFieldPos> ) -> nDecimalPlaces 
+FieldGet( <nFieldPos> ) -> xFieldValue 
+FieldLen( <nFieldPos> ) -> nFieldLength 
+FieldName( <nFieldPos> ) -> cFieldName 
+FieldPos( <cFieldName> ) -> nFieldPos 
+FieldPut( <nFieldPos>, <xValue> ) -> xAssigneValue 
+FieldType( <nFieldPos> ) -> cFieldType 
+FieldWBlock( <cFieldName>, <nWorkArea> ) -> bFieldWBlock 
+FileStats( <cFileName>, [<@cFileAttr>], [<@nFileSize>], [<@dCreateDate>], [<@nCreateTime>], [<@dChangeDate>], [<@nChangeTime>] ) -> lSuccess 
+File( <cFileSpec> ) -> lExists 
+FKLABEL( <nFunctionKey> ) -> cKeyLabel 
+FkMax( ) -> nFKeyCount 
+FLineCount( <cFileName> ) -> nLineCount 
+FLock( ) -> lSuccess 
+FOpen( <cFileName>, [<nMode>]) -> nFileHandle 
+Found( ) -> lSuccess 
+FParseEx( <cFileName>, [<cDelimiter>] ) -> aTextArray 
+FParseLine( <cTextLine>, [<cDelimiter>] ) -> aTextFields 
+FParse( <cFileName>, <cDelimiter> ) -> aTextArray 
+FreadStr( <nFileHandle>, <nBytes> ) -> cString 
+FRead( <nFileHandle>, <@cBuffer>, <nBytes> ) -> nBytesRead 
+FreeLibrary( <nDllHandle> ) -> lSuccess 
+FRename( <cOldFile>, <cNewFile> ) -> nSuccess 
+FSeek( <nFileHandle>, <nBytes>, [<nOrigin>] ) -> nPosition 
+FWordCount( <cFileName> ) -> nWordCount 
+FWrite( <nFileHandle>, <cBuffer>, [<nBytes>] ) -> nBytesWritten 
+GetCurrentThread( ) -> pThreadHandle 
+GetDefaultPrinter( ) -> cPrinterName 
+GetEnv( <cEnvVar> ) -> cString 
+GetLastError( ) -> nErrorCode 
+GetNew( [<nRow>], [<nCol>], <bVarBlock>, [<cVarName>], [<cPicture>], [<cColorSpec>] ) -> oGet 
+GetPrinters( [<lPortInfo>], [<lLocalPrinters>] ) -> aPrinterInfo 
+GetProcAddress( <nDllHandle>, <cFuncName_or_nOrdinal> ) -> pAddress 
+GetRegistry( <nHKEY>, <cRegPath>, <cRegKey> ) -> xRegValue 
+GetSystemThreadID( [<pThreadHandle>] ) -> nSystemTID 
+GetThreadID( [<pThreadHandle>] ) -> nApplicationTID 
+HaaDelAt( <hArray>, <nPos> ) -> NIL 
+HaaGetKeyAt( <hArray>, <nPos> ) -> xKey 
+HaaGetPos( <hArray>, <xKey> ) -> nPos 
+HaaGetRealPos( <hArray>, <nPos> ) -> nSortOrder 
+HaaGetValueAt( <hArray>, <nPos> ) -> xValue 
+HaaSetValueAt( <hArray>, <nPos>, <xValue> ) -> NIL 
+HAllocate( <hHash>, <nCount> ) -> NIL 
+HardCR( <cString> ) -> cConvertedString 
+Hash( [<xKey1>], [<xValue1>], [<xKeyN>], [<xValueN>] ) -> hHash 
+HB_AExpressions( <cMacro> ) -> aMacroExpressions 
+HB_AnsiToOem( <cANSI_String> ) -> cOEM_String 
+HB_AParams( ) -> aValues 
+HB_ArgCheck( <cSwitch> ) -> lExists 
+HB_ArgC( ) -> nArgCount 
+HB_ArgString( <cSwitch> ) -> cValue | NIL 
+HB_ArgV( <nPos> ) -> cArgValue 
+HB_ArrayId( <aArray_or_oObject> ) -> pID 
+HB_ArrayToStructure( <aMembers>, <aTypes>, [<nAlign>] ) -> cBinaryStructure 
+HB_ATokens( <cString> , [<cDelimiter>], [<lSkipQuotes>], [<lDoubleQuotesOnly>] ) -> aTokens 
+HB_AtX( <cRegEx> , <cString>, [<lCaseSensitive>], [<@nStart>], [<@nLen>] ) -> cFoundString 
+HB_BackGroundActive( <nTaskHandle> [, <lNewActive>] ) -> lOldActive 
+HB_BackGroundAdd( <bAction>, [<nMillisecs>], [<lActive>] ) -> nTaskHandle 
+HB_BackGroundDel( <nTaskHandle> ) -> bAction 
+HB_BackGroundReset( ) -> NIL 
+HB_BackGroundRun( [<nTaskHandle>] ) -> NIL 
+HB_BackGroundTime( <nTaskHandle>, [<nNewInterval>] ) -> nOldInterval 
+HB_BitAnd( <nInteger1>, <nInteger2> ) -> nResult 
+HB_BitIsSet( <nInteger>, <nPosition> ) -> lBitIsSet 
+HB_BitNot( <nInteger> ) -> nResult 
+HB_BitOr( <nInteger1>, <nInteger2> ) -> nResult 
+HB_BitReset( <nInteger>, <nPosition> ) -> nResult 
+HB_BitSet( <nInteger>, <nPosition> ) -> nResult 
+HB_Bitshift( <nInteger>, <nShift> ) -> nResult 
+HB_BitXOr( <nInteger1>, <nInteger2> ) -> nResult 
+HB_BuildDate( ) -> cDateTime 
+HB_BuildInfo( <nWhichInfo> ) -> cBuildInfo 
+HB_CheckSum( <cString> ) -> nAdler32 
+HB_CmdArgArgV( ) -> cExeFile 
+HB_Compiler( ) -> cCompilerVersion 
+HB_CRC32( <cString> ) -> nCRC32 
+HB_Crypt( <cString>, <cKey> ) -> cEncryptedString 
+HB_Decrypt( <cEncryptedString>, <cKey> ) -> cString 
+HB_DeSerialize( <cBinary> ) -> xValue 
+HB_EnumIndex( ) -> nIteration 
+HB_ExecFromArray( <aExecutableArray> ) 
+HB_Exec( <nFunctionPointer>, [<Object>], [<xParamsN>] ) 
+HB_FNameMerge( [<cPath>], [<cFileName>], [<cExtension>] ) -> cResult 
+HB_FNameSplit( <cString>, [<@cPath>], [<@cFileName>], [<@cExtension>] ) -> NIL 
+HB_FReadLine( <nFileHandle>, <@cLine>, [<caEndOfLine>], [<nLineLength>] ) -> nReturn 
+HB_FSize( <cFileName> ) -> nFileSize 
+HB_FTempCreate( [<cTempDir>], [<cPrefix>], [<nFileAttr>], [<@cFileName>] ) -> nFileHandle 
+HB_FuncPtr( <cFuncName> ) -> pFuncPointer 
+HB_GCAll( [<lForce>] ) -> NIL 
+HB_GCStep( ) -> NIL 
+HB_IdleAdd( <bAction> ) -> nTaskHandle 
+HB_IdleDel( <nTaskHandle> ) -> bAction 
+HB_IdleReset( ) -> NIL 
+HB_IdleSleepMSec( [<nNewInterval>] ) -> nOldInterval 
+HB_IdleSleep( <nSeconds> ) -> NIL 
+HB_IdleState( ) -> NIL 
+HB_IsArray( <expression> ) -> lIsArray 
+HB_IsBlock( <expression> ) -> lIsCodeblock 
+HB_IsByRef( <@variable> ) -> lIsByReference 
+HB_IsDate( <expression> ) -> lIsDate 
+HB_IsHash( <expression> ) -> lIsHash 
+HB_IsLogical( <expression> ) -> lIsLogical 
+HB_IsMemo( <expression> ) -> lIsMemo 
+HB_IsNIL( <expression> ) -> lIsNIL 
+HB_IsNull( <expression> ) -> lIsNull 
+HB_IsNumeric( <expression> ) -> lIsNumeric 
+HB_IsObject( <expression> ) -> lIsObject 
+HB_IsPointer( <expression> ) -> lIsPointer 
+HB_IsRegExString( <cString> ) -> lIsRegExComp 
+HB_IsString( <expression> ) -> lIsString 
+HB_KeyPut( <nInkeyCode> ) -> NIL 
+HB_LangSelect( [<cLanguageID>] ) -> cOldLanguageID 
+HB_LibDo( <cFuncName>, [<xParams>] ) -> xResult 
+HB_MacroCompile( <cMacro> ) -> cPCode 
+HB_MD5File( <cFileName> ) -> cMD5 
+HB_MD5( <cString> ) -> cMD5 
+HB_MultiThread( ) -> lIsMultiThread 
+HB_MutexCreate( ) -> pMutexHandle 
+HB_MutexLock( <pMutexHandle> ) -> lSuccess 
+HB_MutexTimeoutLock( <pMutexHandle>, <nWaitMilliSecs> ) -> lSuccess 
+HB_MutexTryLock( <pMutexHandle> ) -> lSuccess 
+HB_MutexUnlock( <pMutexHandle> ) -> NIL 
+HB_ObjMsgPtr( <oObject>, <cMethod> ) -> nMethodPointer 
+HB_OemToAnsi( <cOEM_String> ) -> cANSI_String 
+HB_OsNewLine( ) -> cEndOfLine 
+HB_QSelf( ) -> self 
+HB_QWith( ) -> oObject
+HB_RandomInt( [<nMaxLimit>] ) 
+HB_RandomSeed( [<nSeed>] ) -> NIL 
+HB_Random( <nMinLimit>, <nMaxLimit> ) -> nRandomNumber
+HB_ReadIni( <cFileName>, [<lCaseSens>], [<cDelimiter>], [<lAutoMain>] ) -> hIniData 
+HB_RegExAll( <cRegEx> , <cString>, [<lCaseSensitive>], [<lNewLine>], [<nMaxMatches>], [<nWichMatch>], [<lMatchOnly>] ) -> aAllRegexMatches 
+HB_RegExComp( <cRegEx> , [<lCaseSensitive>], [<lNewLine>] ) -> cBinaryRegEx 
+HB_RegExMatch( <cRegEx> , <cString>, [<lCaseSensitive>], [<lNewLine>] ) -> lFound 
+HB_RegExSplit( <cRegEx>, <cString>, [<lCaseSensitive>, [<lNewLine>], [<nMaxMatches>] ) -> aSplitString 
+HB_RegEx( <cRegEx> , <cString>, [<lCaseSensitive>], [<lNewLine>] ) -> aMatches 
+HB_ResetWith( <oObject> ) -> NIL 
+HB_RestoreBlock( <aCodeblockInfo> ) -> bCodeblock 
+HB_SaveBlock( <bCodeblock> ) -> aCodeBlockInfo 
+HB_Serialize( <xValue> ) -> cBinary 
+HB_SetCodePage( [<cCodePageID>] ) -> cOldCodePageID 
+HB_SetIniComment( <cLineComment>, <cInlineComment> ) -> NIL 
+HB_SetMacro( <nMode>, [<lOnOff>] ) -> lOldSetting 
+HB_SetWith( [<oNewObject>] ) -> oOldObject 
+HB_SizeofCStructure( <aTypes>, [<nAlign>] ) -> nBytes 
+HB_StructureToArray( <cBinary>, <aTypes>, [<nAlign>], [<lRecurse>], <aStructure> ) -> aStructure 
+HB_ThisArray( <pID> ) -> aArray|oObject 
+HB_VMExecute( <cPCode> ) -> xValue 
+HB_VMMode( ) -> nCreationMode 
+HB_WithObjectCounter( ) -> nNestingLevel 
+HB_WriteIni( <cFileName>, <hIniData>, [<cCommentBegin>], [<cCommentEnd>], [<lAutoMain>] ) -> lSuccess 
+HB_XmlErrorDesc( <nErrorCode> ) -> cErrorMessage 
+HClone( <hHash> ) -> hClone 
+HCopy( <hSource>, <hTarget>, [<nStart>], [<nCount>], [<xMode>] ) -> hTarget 
+HDelAt( <hHash>, <nPos> ) -> NIL 
+HDel( <hHash>, <xKey> ) -> NIL 
+Header( ) -> nBytes 
+HEval( <hHash>, <bBlock>, [<nStart>], [<nCount>] ) -> hHash 
+HexToNum( <cHexString> ) -> nNumber 
+HexToStr( <cHexString> ) -> cASCIIstring 
+HFILL( <Hash>, <xValue> ) -> NIL 
+HGetAACompatibility( <hHash> ) -> lIsAssocArray 
+HGetAutoAdd( <hHash> ) -> lIsAutoAdd 
+HGetCaseMatch( <hHash> ) -> lIsCaseSensitive 
+HGetKeyAt( <hHash>, <nPos> ) -> xKey 
+HGetKeys( <hHash> ) -> aKeys 
+HGetPairAt( <hHash>, <nPos> ) -> { xKey, xValue } 
+HGetPartition( <hHash>, [<@nPageSize>], [<@nLevel>] ) -> lIsPartitioned 
+HGetPos( <hHash>, <xKey>) -> nPos 
+HGetVaaPos( <hArray> ) -> aSortOrder 
+HGetValueAt( <hHash>, <nPos> ) -> xValue 
+HGetValues( <hHash> ) -> aValues 
+HGet( <hHash>, <xKey> ) -> xValue 
+HHasKey( <hHash>, <xKey> ) -> lExists 
+HMerge( <hTarget>, <hSource>, [<xMode>]) -> hTarget 
+HScan( <hHash>, <xValue>, [<nStart>], [<nCount>], [<lExact>], [<lASCII>] ) -> nPos 
+HSetAACompatibility( <hHash>, <lToggle> ) -> lSuccess 
+HSetAutoAdd( <hHash>, <lOnOff> ) -> hHash 
+HSetCaseMatch( <hHash>, <lOnOff> ) -> hHash 
+HSetPartition( <hHash>, <nPageSize>, [<nLevel>] ) -> NIL 
+HSetValueAt( <hHash>, <nPos>, <xValue> ) -> NIL 
+HSet( <hHash>, <xKey>, <xValue> ) -> NIL 
+I2Bin( <nNumber> ) -> cInteger 
+If( <lCondition>, <exprTrue>, <exprFalse> ) -> xValue
+IIf( <lCondition>, <exprTrue>, <exprFalse> ) -> xValue
+IndexExt( ) -> cFileExtension 
+IndexKey( <nOrder> ) -> cIndexKey 
+IndexOrd( ) -> nOrder 
+Inkey( [<nWaitSeconds>] [, <nEventMask>] ) -> nInkeyCode 
+Int( <nNumber> ) -> nInteger 
+IsAlNum( <cString> ) -> lIsAlphaNumeric 
+IsAlpha( <cString> ) -> lIsAlphabetic 
+IsAscii( <cString> ) -> lIs7BitChar 
+IsCntrl( <cString> ) -> lIsCtrlChar 
+IsColor( ) -> lIsColor 
+IsDigit( <cString> ) -> lIsDigit 
+IsDirectory( <cDirSpec> ) -> lIsDirectory 
+IsDisk( <cDrive> ) -> lDriveIsReady 
+IsGraph( <cString> ) -> lIs7BitGraphicalChar 
+IsLower( <cString> ) -> lIsLowerCase 
+IsPrinter( [<cPrinterName>] ) -> lIsPrinter 
+IsGraph( <cString> ) -> lIs7BitPrintableChar 
+IsPunct( <cString> ) -> lIsPunctuationChar 
+IsSameThread( <pThreadHandle1>, <pThreadHandle2> ) -> lIsSameThread 
+IsSpace( <cString> ) -> lIsWhiteSpaceChar 
+IsUpper( <cString> ) -> lIsUpperCase 
+IsValidThread( <xValue> ) -> lIsValid 
+IsXDigit( <cString> ) -> lIsHexDigit 
+JoinThread( <pThreadHandle> ) -> NIL 
+KillAllThreads( ) -> NIL 
+KillThread( <pThreadHandle> ) -> NIL 
+L2Bin( <nNumber> ) -> cInteger 
+LastKey( [<nEventMask>] ) -> nLastInkeyCode 
+LastRec( ) -> nRecords 
+Left( <cString>, <nCount> ) -> cSubString 
+LenNum( <nNumber> ) -> nLength 
+Len( <xValue> ) -> nCount 
+LibFree( <pDllHandle> ) -> lSuccess 
+LibLoad( <cDllFile> ) -> pDLL 
+LoadLibrary( <cDLLFile> ) -> nDllHandle 
+Log( <nNumber> ) -> nNaturalLog 
+Lower( <cString> ) -> cLowerCaseString 
+LTrim( <cString> ) -> cTrimmedString 
+LUpdate( ) -> dLastChange 
+MakeDir( <cDirectory> ) -> nOSError 
+MaxCol( ) -> nColumn 
+MaxRow( ) -> nRow 
+Max( <Value1>, <Value2> ) -> LargerValue
+MCol( ) -> nMouseCol 
+MDblClk( [<nNewInterval>] ) -> nMilliSeconds 
+MemoEdit( [<cString>], [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<lEditMode>], [<cUserFunc>], [<nLineLen>], [<nTabSize>], [<nBufferRow>], [<nBufferCol>], [<nRowOffset>], [<nColOffset>] ) -> cTextBuffer 
+MemoLine( <cString>, [<nLineLen>], [<nLineNum>], [<nTabSize>], [<lWrap>], [<lLongLines>], [<@nOffSet>] ) -> cTextLine 
+MemoRead( <cFileName> ) -> cString 
+Memory( <nWhichMemory> ) -> nMemoryUsage 
+MemoTran( <cString> , [<cReplaceHardCRLF>], [<cReplaceSoftCRLF>] ) -> cNewString 
+MemoWrit( <cFileName>, <cString> ) -> lSuccess 
+MemVarBlock( <cMemVarName> ) -> bMemVarBlock 
+MenuModal( <oTopBarMenu>, [<nStartItem>], [<nMsgRow>], [<nMsgLeft>], [<nMsgRight>], [<cMsgColor>], [<GetList> ) -> nMenuItemID 
+MHide( ) -> NIL 
+Min( <Value1>, <Value2> ) -> nSmallerValue
+MLCount( <cString>, [<nLineLen>], [<nTabSize>], [<lWrap>], [<lLongLines>] ) -> nLineCount 
+MLCToPos( <cString>, [<nLineLen>], [<nTextRow>], [<nTextCol>], [<nTabSize>], [<lWrap>], [<lLongLines>]) -> nPosition 
+MLeftDown( ) -> lLeftButtonIsPressed 
+MlPos( <cString>, [<nLineLen>, [<nLineNum>], [<nTabSize>], [<lWrap>], [<lLongLines>] ) -> nPosition 
+Mod( <nDividend>, <nDivisor> ) -> nRemainder 
+Month( <dDate> ) -> nMonth 
+MPosToLC( <cString>, [<nLineLen>], [<nCharPos>], [<nTabSize>], [<lWrap>], [<lLongLines>]) -> { nTextRow, nTextCol } 
+MPresent( ) -> lMouseIsPresent 
+MRestState( <cSavedState> ) -> NIL 
+MRightDown( ) -> lRightButtonIsPressed 
+MRow( ) -> nMouseRow 
+MSaveState( ) -> cSavedState 
+MSetBounds( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> NIL 
+MSetCursor( [<lOnOff>] ) -> lPreviousSetting 
+MSetPos( <nRow>, <nCol> ) -> NIL 
+MShow( ) -> NIL 
+NetErr( [<lNewStatus>] ) -> lIsNetworkError 
+NetName( [<lInfo>] ) -> cComputerName | cUserName 
+NextKey( [<nEventMask>] ) -> nNextInkeyCode 
+NotifyAll( <pMutexHandle> ) -> NIL 
+Notify( <pMutexHandle>, [<xValue>] ) -> NIL 
+NumButtons( ) -> nButtonCount 
+NumToHex( <nNum_or_pPointer>, [<nLen>]) -> cHexString 
+OrdBagExt( ) -> cFileExtension 
+OrdBagName( [<nOrder_or_cIndexName>] ) -> cIndexFilename 
+OrdCondSet( [<cForCondition>], [<bForCondition>], [<lAllRecords>], [<bWhileCondition>], [<bEval>] , [<nInterval>], [<nStart>] , [<nNext>] , [<nRecord>], [<lRest>] , [<lDescend>], [<reserved>], [<lAdditive>], [<lCurrent>], [<lCustom>], [<lNoOptimize>], [<lUseFilter>], [<lExclusive>] ) -> lSuccess 
+OrdCount( [<cIndexFile>] ) -> nOpenIndexes 
+OrdCreate( <cIndexFile>, [<cIndexName>], <cIndexExpr>, <bIndexExpr>, [<lUnique>] ) -> NIL 
+OrdCustom( [<cIndexName> | <nOrder>], [<cIndexFile>] , [<lNewCustomFlag>] ) -> lOldCustomFlag 
+OrdDescend( [<cIndexName> | <nOrder>], [<cIndexFile>] , [<lNewDescendFlag>] ) -> lOldDescendFlag 
+OrdDestroy( <cIndexName> [, <cIndexFile>] ) -> NIL 
+OrdFindRec( <nRecno>, [<lCurrentRec>] ) -> lFound 
+OrdFor( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> cForExpression 
+OrdIsUnique( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> lUniqueFlag 
+OrdKeyAdd( [<nOrder_or_cIndexName>], [<cIndexFile>] , [<xIndexValue>] ) -> lSuccess 
+OrdKeyCount( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> nKeyCount 
+OrdKeyDel( [<nOrder_or_cIndexName>], [<cIndexFile>] , [<xIndexValue>] ) -> lSuccess 
+OrdKeyGoTo( <nIndexKeyNo> ) -> lSuccess 
+OrdKeyNo( [<nOrder_or_cIndexName>], [<cIndexFile>] ) -> nOrdKeyNo 
+OrdKeyRelPos( [<nNewPosition>] ) -> nRelativePosition 
+OrdKeyVal( ) -> xIndexValue 
+OrdKey( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> cIndexKey 
+OrdListAdd( <cIndexFile> ) -> NIL 
+OrdListClear( ) -> NIL 
+OrdListRebuild( ) -> NIL 
+OrdName( [<nOrder>], [<cIndexFile>] ) -> cIndexName 
+OrdNumber( [<cIndexName>], [<cIndexFile>] ) -> nOrder 
+OrdScope( <nScope>, [<xNewValue>] ) -> xOldValue 
+OrdSetFocus( [<nOrder_or_cIndexName>], [<cIndexFile>] ) -> cOldIndexName 
+OrdSetRelation( <nArea_or_cAlias>, <bRelation>, [<cRelation>] ) -> NIL 
+OrdSkipRaw( [<nRecords>] ) -> NIL 
+OrdSkipUnique( [<nDirection>] ) -> lSuccess 
+OrdWildSeek( <cWildCardString>, [<lCurrentRec>], [<lBackwards>] ) -> lFound 
+OS( ) -> cOsName 
+Os_IsWin2000( ) -> lIsWin2000 
+Os_IsWin2000_Or_Later( ) -> lIsWin2000_Or_Later 
+Os_IsWin2003( ) -> lIsWin2003 
+Os_IsWin95( ) -> lIsWin95 
+Os_IsWin98( ) -> lIsWin98 
+Os_IsWin9X( ) -> lIsWin9X 
+Os_IsWinME( ) -> lIsWinME 
+Os_IsWinNT351( ) -> lIsWinNT351 
+Os_IsWinNT4( ) -> lIsWinNT40 
+Os_IsWinNT( ) -> lIsWinNT 
+Os_IsWinVISTA( ) -> lIsWinVista 
+Os_IsWinXP( ) -> lIsWinXP 
+Os_IsWtsClient( ) -> lIsWtsClient 
+Os_VersionInfo( ) -> aVersionInfo 
+OutErr( <expression> ) -> NIL 
+OutStd( <expression> ) -> NIL 
+PadC( <expression>, <nLength>, [<cFillChar>] ) 
+PCol( ) -> nColumn 
+PCount( ) -> nParamCount 
+PrinterExists( <cPrinterName> ) -> lInstalled 
+PrinterPortToName( <cPortName> ) -> cPrinterName 
+PrintFileRaw( <cPrinterName>, <cFileName>, [<cJobTitle>] ) -> nErrorCode 
+ProcFile( [<nCallStack>] ) -> cPrgFilename 
+ProcLine( [<nCallStack>] ) -> nPrgLineNumber 
+ProcName( [<nCallStack>] ) -> nProcName 
+PRow( ) -> nRow 
+PValue( <nParamPos> ) -> xParamValue 
+QOut( [<expression>] ) -> NIL
+QQOut( [<expression>]) -> NIL
+QueryRegistry( <nHKEY>, <cRegPath>, <cRegKey>, <xValue>, [<lCreate>] ) -> lExists 
+RAscan( <aArray>, <xbSearch>, [<nStart>], [<nCount>], [<lExact>], [<lASCII>] ) -> nElement 
+RAt( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) -> nPos 
+RddInfo( <nDefine>, [<xNewSetting>], [<cRddName>] ) -> xOldSetting 
+RddList( [<nRddType>] ) -> aRDDNames 
+RddName( ) -> cRDDName 
+RddSetDefault( [<cNewRDD>] ) -> cOldRDD 
+ReadModal( <GetList>, [<nStartGet>], [<oTopBarMenu>], [<nMsgRow>], [<nMsgLeft>], [<nMsgRight>], [<cMsgColor>] ) -> lUpDated 
+RecCount( ) -> nRecords 
+RecNo( ) -> nRecord 
+RecSize( ) -> nBytes 
+Replicate( <cString>, <nCount> ) -> cReplicatedString 
+RestScreen( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], <cScreen> ) -> NIL 
+Right( <cString>, <nCount> ) -> cSubString 
+RLOCK( ) -> lIsLocked 
+Round( <nNumber>, <nDecimals> ) -> nRounded 
+Row( ) -> nRowPos 
+RTrim( <cString>, [<lAllWhiteSpace>] ) -> cTrimmedString
+SaveScreen( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> cScreen 
+Scroll( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<nRows>], [<nColumns>] ) -> NIL 
+SecondsSleep( <nSeconds> ) -> NIL 
+Seconds( ) -> nSeconds 
+Secs( <cTime> ) -> nSeconds 
+Select( [<cAlias>] ) -> nWorkArea 
+SetBlink( [<lOnOff>] ) -> lOldSetting 
+SetCancel( [<lOnOff>] ) -> lOldSetting 
+SetColor( [<cNewColorString>] ) -> cOldColorString 
+SetCursor( [<nNewCursorShape>] ) -> nOldCursorShape 
+SetErrorMode( [<nNewErrorMode>] ) -> nOldErrorMode 
+SetKey( <nInkeyCode>, [<bNewCodeblock>] ) -> bOldCodeblock 
+SetLastError( <nNewErrorCode> ) -> nOldErrorCode 
+SetMode( <nRowCount>, <nColCount> ) -> lSuccess 
+SetMouse( [<lOnOff>], [<nRow>], [<nCol>] ) -> lIsMouseVisible 
+SetPos( <nRow>, <nCol> ) -> NIL 
+SetPrc( <nRow>, <nCol> ) -> NIL 
+SetRegistry( <nHKEY>, <cRegPath>, <cRegKey>, <xValue> ) -> lSuccess 
+Set( <nDefine>, [<xNewSetting>], [<xOption>] ) -> xOldSetting 
+SoundEx( <cString> ) -> cSoundex 
+Space( <nCount> ) -> cSpaces 
+SQrt( <nNumber> ) -> nSquareRoot 
+StartThread( <bBlock_or_cFuncName_or_pFuncPtr>, [<xParams>] ) 
+StoD( [<cDate>] ) -> dDate 
+StopThread( <pThreadHandle>, [<pMutexHandle>] ) -> NIL 
+StrToHex( <cString>, [<cSeparator>] ) -> cHexString 
+StrTran( <cString>, <cSubString>, [<cReplace>], [<nStart>], [<nCount>] ) -> cNewString 
+StrZero( <nNumber>, [<nLength>], [<nDecimals>] ) -> cString 
+Str( <nNumber>, [<nLength>], [<nDecimals>], [<lTrim>] ) -> cString 
+Stuff( <cString>, <nStart>, <nDelete>, <cInsert> ) -> cNewString 
+SubscribeNow( <pMutexHandle>, <nWaitMilliSecs>, [<@lNotified>] ) -> xReturn 
+Subscribe( <pMutexHandle>, <nWaitMilliSecs>, [<@lNotified>] ) -> xReturn 
+SubStr( <cString>, <nStart>, [<nCount>] ) -> cSubstring 
+TBMouse( <oTBrowse>, <nMouseRow>, <nMouseCol> ) -> nHandled 
+TBrowseDB( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> oTBrowse 
+TBrowseNew( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> oTBrowse 
+ThreadSleep( <nMilliSeconds>, [<lNoCpu>] ) -> NIL 
+Throw( <oError> ) -> NIL 
+Time( ) -> cHHMMSS 
+Tone( <nFrequency>, [<nDuration>] ) -> NIL 
+TraceLog( <xVariables> ) -> lTrue 
+Transform( <xValue>, <cPicture> ) -> cFormattedString 
+Trim( <cString>, [<lAllWhiteSpace>] ) -> cTrimmedString
+RTrim( <cString>, [<lAllWhiteSpace>] ) -> cTrimmedString
+TString( <nSeconds> ) -> cTimeString 
+Type( <cMacroExpr> ) -> cDataType 
+U2bin( <nNumber> ) -> cInteger 
+Upper( <cString> ) -> cUpperCaseString 
+Used( ) -> lIsUsed 
+ValToPrgExp( <xValue> ) -> cMacroExpression 
+ValToPrg( <xValue> ) -> cPRGcode 
+Valtype( <expression >) -> cDataType 
+Val( <cNumber> ) -> nNumber 
+Version( ) -> cVersion 
+W2Bin( <nNumber> ) -> cInteger 
+WaitForThreads( ) -> NIL 
+WildMatch( <cPattern>, <cString>, [<lFullMatch>] ) -> lFound 
+Word( <nNumber> ) -> nInteger 
+Year( <dDate> ) -> nYear 

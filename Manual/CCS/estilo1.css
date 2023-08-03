@@ -1,0 +1,94 @@
+.wb1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+}
+.tab1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+}
+.tab2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+}
+.wb01 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+}
+.wb1Tit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.wblink1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #FF0000;
+	text-decoration: none;
+
+
+}
+.wblink2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #0000FF;
+}
+}
+.wb1-menu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+}
+.cx   {border-width:1px;border-style:solid;text-align:left;}
+.cx1  {border-width:1px;border-style:solid;text-align:right;}
+.cx2  {
+	height:19px;border-width:0px;border-style:solid;background:"#FFFFCC";text-align:right;}
+.cx3a  {
+	font-weight: bold; border-width:0px;border-style:solid;background:"#FFFFFF";text-align:center;}
+.cx3b  {
+	font-weight: bold; border-width:0px;border-style:solid;background:"#F4F4F4";text-align:center;}
+.InputText {
+	FONT-SIZE: 10px; BORDER-LEFT-COLOR: #cccccc; BORDER-BOTTOM-COLOR: #cccccc; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #cccccc; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-COLOR: #cccccc; BORDER-BOTTOM-STYLE: solid
+}
+.grupo1 {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-style: normal;
+}
+A:link 		{text-decoration: none;}
+A:visited 	{text-decoration: none;}
+A:hover 	{text-decoration: none;}
+A:active  	{text-decoration: none;}
+.redlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #FF0000;
+}
+.whitelink {
+	color: #FFFFFF;
+}
+.blacklink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #000000;
+}
+.blacklink2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000000;
+}
+.azullink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #0000FF;
+}

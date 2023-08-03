@@ -1,0 +1,1571 @@
+/*
+ * xHarbour & Harbour function list, by Vailton Renato
+ * 25/5/2007 00:14:11
+ */
+AAdd( <aArray>, <xValue> ) -> xValue 
+Abs( <nExpression> ) -> nPositive 
+AChoice( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], <acItems>, [<aSelectable>], [<cUserFunc>], [<nFirstItem>], [<nFirstRow>] ) -> nSelectedItem 
+AClone( <aArray> ) -> aClone 
+ACopy( <aSource>, <aTarget>, [<nSourceStart>], [<nCount>], [<nTargetStart>] ) -> aTarget 
+ADel( <aArray>, <nElement>, [<lShrink>] ) -> aArray 
+ADir( [<cFileMask>], [<aName>], [<aSize>], [<aDate>], [<aTime>], [<aAttr>] ) -> nDirEnries 
+AEval( <aArray>, <bBlock>, [<nStart>], [<nCount>] ) -> aArray 
+AFields( [<aFieldName>], [<aFieldType>], [<aFieldLen>], [<aFieldDec>] ) -> nCount 
+AFill( <aArray>, <expression>, [<nStart>], [<nCount>] ) -> aArray 
+AIns( <aArray>, <nElement>, [<xValue>], [<lGrow>] ) -> aArray 
+ALenAlloc( <aArray> ) -> nElements 
+*Alert( <xMessage>, [<aOptions>], [<cColor>], [<nDelay>] ) -> nChoice 
+Alias( [<nWorkArea>] ) -> cAlias 
+*AllTrim( <cString> ) -> cTrimmed 
+AltD( [<nAction>] ) -> NIL 
+AmPm( <cTime> ) -> cFormattedTime 
+Array( <nDim1> [, <nDimN, ...>] ) -> aArray 
+Ascan( <aArray>, <xbSearch>, [<nStart>], [<nCount>], [<lExact>], [<lASCII>] ) -> nElement 
+ASC( <cCharacter> ) -> nAsciiCode 
+ASizeAlloc( <aArray>, <nCount> ) -> aArray 
+ASize( <aArray>, <nCount> ) -> aArray 
+ASort( <aArray>, [<nStart>], [<nCount>], [<bSort>] ) -> aArray 
+ATail( <aArray> ) -> xValue 
+At( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) -> nPos 
+Bin2I( <cInteger> ) -> nNumber 
+Bin2L( <cInteger> ) -> nNumber 
+Bin2U( <cInteger> ) -> nNumber 
+Bin2W( <cInteger> ) -> nNumber 
+BlobDirectExport( <nBlobID>, <cTargetFile>, [<nMode>] ) -> lSuccess 
+BlobDirectGet( <nBlobID>, [<nStart>], [<nCount>] ) -> xBlobData 
+BlobDirectImport( <nOldBlobID>, <cSourceFile> ) -> nNewBlobID 
+BlobDirectPut( <nOldblobID>, <xBlobData> ) -> nNewblobID 
+BlobExport( <nFieldPos>, <cTargetFile>, [<nMode>] ) -> lSuccess 
+BlobGet( <nFieldPos>, [<nStart>], [<nCount>] ) -> xBlobData 
+BlobImport( <nFieldPos>, <cSourceFile> ) -> lSuccess 
+BlobRootDelete( ) -> lSuccess 
+BlobRootGet( ) -> xBlobData 
+BlobRootLock( ) -> lSuccess 
+BlobRootPut( <xBlobData> ) -> lSuccess 
+BlobRootUnlock( ) -> NIL 
+BoF( ) -> lBeginOfFile 
+Break( <Expression> ) -> NIL 
+*Browse( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> lOk 
+CDoW( <dDate> ) -> cDayName 
+Chr( <nAsciiCode> ) -> cCharacter 
+CMonth( <dDate> ) -> cMonthName 
+ColorSelect( <nColorIndex> ) -> NIL 
+Col( ) -> nColPos 
+ConvToAnsiCP( <cOEM_String> ) -> cANSI_String 
+ConvToOemCP( <cANSI_String> ) -> cOEM_String 
+CStr( <xValue> ) -> cString 
+CtoD( <cDateString> ) -> dDate 
+CurDir( [<cDrive>] ) -> cDirPath 
+CurDrive( [<cNewDrive>] ) -> cOldDrive 
+Date( ) -> dDate 
+Days( <nSeconds> ) -> nDays 
+Day( <dDate> ) -> nDay 
+DbAppend( [<lUnlockRecords>] ) -> NIL 
+DbClearFilter( ) -> NIL 
+DbClearIndex( ) -> NIL 
+DbClearRelation( ) -> NIL 
+DbCloseAll( ) -> NIL 
+DbCloseArea( ) -> NIL 
+DbCommitAll( ) -> NIL 
+DbCommit( ) -> NIL 
+DbCopyExtStruct( <cDatabaseExt> ) -> lSuccess 
+DbCopyStruct( <cDatabase>, [<aFieldList>] ) -> NIL 
+DbCreateIndex( <cIndexFile>, <cIndexExpr>, [<bIndexExpr>], [<lUnique>], [<cIndexName>] ) -> NIL 
+DbCreate( <cDatabase>, <aStructure>, [<cDriver>], [<lNewArea>], [<cAlias>] ) -> NIL 
+DbDelete( ) -> NIL 
+DbEdit( [<nTop>] , [<nLeft>] , [<nBottom>], [<nRight>] , [<aColumns>], [<bcUserFunc>], [<xSayPictures>], [<xColumnHeaders>], [<xHeadingSep>], [<xColumnSep>], [<xFootingSep>], [<xColumnFootings>], [<xColumnPreBlock>], [<xColumnPostBlock>] ) -> NIL 
+DbEval( <bBlock> , [<bForCondition>], [<bWhileCondition>], [<nNextRecords>], [<nRecord>], [<lRest>] ) -> NIL 
+DbFieldInfo( <nInfo>, <nFieldPos> ) -> xFieldInfo 
+DbFileGet( <nFieldPos>, <cTargetFile>, <nMode> ) -> lSuccess 
+DbFilePut( <nFieldPos>, <cSourceFile> [, <Mode>] ) -> lSuccess 
+DbFilter( ) -> cFilter 
+Dbf( ) -> <cAliasName> 
+DbGoBottom( ) -> NIL 
+DbGoTop( ) -> NIL 
+DbGoto( <xRecno> ) -> NIL 
+DbInfo( <nDefine>, [<xNewSetting>] ) -> xCurrentSetting 
+DbOrderInfo( <nDefine> , [<cIndexFile>] , [<nOrder_or_cIndexName>], [<xNewSetting>] ) -> xCurrentSetting 
+DbRecall( ) -> NIL 
+DbRecordInfo( <nDefine>, [<nRecord>], [<xNewSetting>] ) -> xOldSetting 
+DbReindex( ) -> NIL 
+DbRelation( <nRelation> ) -> cLinkExpression 
+DbRLockList( ) -> aLockedRecords 
+DbRLock( [<xRecno>] ) -> lSuccess 
+DbRSelect( <nRelation> ) -> nWorkArea 
+DbRUnlock( [<xRecno>] ) -> NIL 
+DbSeek( <xValue>, [<lSoftSeek>], [<lFindLast>] ) -> lFound 
+DbSelectArea( <WorkArea> ) -> NIL 
+DbSetDriver( [<cRddName>] ) -> cPreviousRDD 
+DbSetFilter( <bFilter>, [<cFilter>] ) -> NIL 
+DbSetIndex( <cIndexFile> ) -> NIL 
+DbSetOrder( <nIndexPos> ) -> NIL 
+DbSetRelation( <Alias>, <bRelation>, <cRelation>, [<lScoped>] ) -> NIL 
+DbSkipper( <nSkipRequest> ) -> nSkipResult 
+DbSkip( [<nRecords>] ) -> NIL 
+DbStruct( ) -> aStructure 
+DbTableExt( ) -> cFileExtension 
+DbUnlockAll( ) -> NIL 
+DbUnlock( ) -> NIL 
+DbUseArea( [<lNewArea>], [<cRddName>], <cDatabase>, [<cAlias>], [<lShared>], [<lReadonly>], [<cCodePage>], [<nConnection>] ) -> NIL 
+DefPath( ) -> cDefaultPath 
+Deleted( ) -> lIsDeleted 
+Descend( <xValue> ) -> xDescend 
+DevOutPict( <expression>, <cPicture>, [<cColorString>] ) -> NIL 
+DevOut( <expression>, [<cColorString>], [<nRow>], [<nCol>] ) -> NIL 
+DevPos( <nRow>, <nCol> ) -> NIL 
+DirChange( <cDirectory> ) -> nOSError 
+DirectoryRecurse( <cDirSpec>, [<cAttributes>] ) -> aDirectory 
+Directory( <cDirSpec>, [<cAttributes>] ) -> aDirectory 
+DirRemove( <cDirectory> ) -> nOSError 
+DiskChange( <cDrive> ) -> lSuccess 
+DiskName( ) -> cDrive 
+DiskSpace( [<nDrive>], [<nType>] ) -> nBytes 
+DispBegin( ) -> NIL 
+DispBox( <nTop>, <nLeft>, <nBottom>, <nRight>, [<cnBoxString>], [<cColor>] ) -> NIL 
+DispCount( ) -> nDispCount 
+DispEnd( ) -> NIL 
+DispOutAtSetPos( [<lNewSetting>] ) -> lOldSetting 
+DispOutAt( <nRow>, <nCol>, <expression>, [<cColor>], [<lSetPos>] ) -> NIL 
+DispOut( <expression>, [<cColor>] ) -> NIL 
+DllCall( <cDllFile_OR_nDllHandle>, [<nCallingConvention>], <cFuncName_OR_nOrdinal>, [<xParams>] ) -> nResult 
+DllExecuteCall( <pCallTemplate>, <xParamsN>] ) -> nResult 
+DllLoad( <cDLLFileName> ) -> nDllHandle 
+DllPrepareCall( <cDllFile_OR_nDllHandle>, [<nCallingConvention>], <cFuncName_OR_nOrdinal> ) -> pCallTemplate 
+DllUnload( <nDllHandle> ) -> lSuccess 
+DosError( [<nNewErrorCode>] ) -> nOsErrorCode 
+DoW( <dDate> ) -> nDayOfWeek 
+DtoC( <dDate>) -> cDateString 
+DtoS( <dDate>) -> cYYYYMMDD 
+ElapTime( <cStartTime>, <cEndTime> ) -> cElapsedTime 
+Empty( <expression> ) -> lIsEmpty 
+Eof( ) -> lIsEndOfFile 
+ErrorBlock( [<bErrorBlock>] ) -> bLastErrorBlock 
+ErrorLevel( [<nNewExitCode>] ) -> nCurrentExitCode 
+ErrorNew( [<cSubSystem> ], [<nGenCode> ], [<nSubCode> ], [<cOperation> ], [<cDescription>], {<aArgs> ], [<cModuleName> ], [<cProcName> ], [<nProcLine> ] ) -> oError 
+ErrorSys( <bDefaultErrorBlock> ) -> NIL 
+Eval( <bBlock>, [<xValue> ] ) -> xReturn 
+Exp( <nExponent> ) -> nAntiLogarithm 
+FCharCount( <cFileName> ) -> nCharCount 
+FClose( <nFileHandle> ) -> lSuccess 
+FCount( ) -> nFieldCount 
+FCreate( <cFileName>, [<nFileAttr>] ) -> nFileHandle 
+FErase( <cFileName> ) -> nSuccess 
+FError( ) -> nErrorCode 
+FieldBlock( <cFieldName> ) -> bFieldBlock 
+FieldDec( <nFieldPos> ) -> nDecimalPlaces 
+FieldGet( <nFieldPos> ) -> xFieldValue 
+FieldLen( <nFieldPos> ) -> nFieldLength 
+FieldName( <nFieldPos> ) -> cFieldName 
+FieldPos( <cFieldName> ) -> nFieldPos 
+FieldPut( <nFieldPos>, <xValue> ) -> xAssigneValue 
+FieldType( <nFieldPos> ) -> cFieldType 
+FieldWBlock( <cFieldName>, <nWorkArea> ) -> bFieldWBlock 
+FileStats( <cFileName>, [<@cFileAttr>], [<@nFileSize>], [<@dCreateDate>], [<@nCreateTime>], [<@dChangeDate>], [<@nChangeTime>] ) -> lSuccess 
+File( <cFileSpec> ) -> lExists 
+FKLABEL( <nFunctionKey> ) -> cKeyLabel 
+FkMax( ) -> nFKeyCount 
+FLineCount( <cFileName> ) -> nLineCount 
+FLock( ) -> lSuccess 
+FOpen( <cFileName>, [<nMode>]) -> nFileHandle 
+Found( ) -> lSuccess 
+FParseEx( <cFileName>, [<cDelimiter>] ) -> aTextArray 
+FParseLine( <cTextLine>, [<cDelimiter>] ) -> aTextFields 
+FParse( <cFileName>, <cDelimiter> ) -> aTextArray 
+FreadStr( <nFileHandle>, <nBytes> ) -> cString 
+FRead( <nFileHandle>, <@cBuffer>, <nBytes> ) -> nBytesRead 
+FreeLibrary( <nDllHandle> ) -> lSuccess 
+FRename( <cOldFile>, <cNewFile> ) -> nSuccess 
+FSeek( <nFileHandle>, <nBytes>, [<nOrigin>] ) -> nPosition 
+FWordCount( <cFileName> ) -> nWordCount 
+FWrite( <nFileHandle>, <cBuffer>, [<nBytes>] ) -> nBytesWritten 
+GetCurrentThread( ) -> pThreadHandle 
+GetDefaultPrinter( ) -> cPrinterName 
+GetEnv( <cEnvVar> ) -> cString 
+GetLastError( ) -> nErrorCode 
+GetNew( [<nRow>], [<nCol>], <bVarBlock>, [<cVarName>], [<cPicture>], [<cColorSpec>] ) -> oGet 
+GetPrinters( [<lPortInfo>], [<lLocalPrinters>] ) -> aPrinterInfo 
+GetProcAddress( <nDllHandle>, <cFuncName_or_nOrdinal> ) -> pAddress 
+GetRegistry( <nHKEY>, <cRegPath>, <cRegKey> ) -> xRegValue 
+GetSystemThreadID( [<pThreadHandle>] ) -> nSystemTID 
+GetThreadID( [<pThreadHandle>] ) -> nApplicationTID 
+HaaDelAt( <hArray>, <nPos> ) -> NIL 
+HaaGetKeyAt( <hArray>, <nPos> ) -> xKey 
+HaaGetPos( <hArray>, <xKey> ) -> nPos 
+HaaGetRealPos( <hArray>, <nPos> ) -> nSortOrder 
+HaaGetValueAt( <hArray>, <nPos> ) -> xValue 
+HaaSetValueAt( <hArray>, <nPos>, <xValue> ) -> NIL 
+HAllocate( <hHash>, <nCount> ) -> NIL 
+HardCR( <cString> ) -> cConvertedString 
+Hash( [<xKey1>], [<xValue1>], [<xKeyN>], [<xValueN>] ) -> hHash 
+HB_AExpressions( <cMacro> ) -> aMacroExpressions 
+HB_AnsiToOem( <cANSI_String> ) -> cOEM_String 
+HB_AParams( ) -> aValues 
+HB_ArgCheck( <cSwitch> ) -> lExists 
+HB_ArgC( ) -> nArgCount 
+HB_ArgString( <cSwitch> ) -> cValue | NIL 
+HB_ArgV( <nPos> ) -> cArgValue 
+HB_ArrayId( <aArray_or_oObject> ) -> pID 
+HB_ArrayToStructure( <aMembers>, <aTypes>, [<nAlign>] ) -> cBinaryStructure 
+HB_ATokens( <cString> , [<cDelimiter>], [<lSkipQuotes>], [<lDoubleQuotesOnly>] ) -> aTokens 
+HB_AtX( <cRegEx> , <cString>, [<lCaseSensitive>], [<@nStart>], [<@nLen>] ) -> cFoundString 
+HB_BackGroundActive( <nTaskHandle> [, <lNewActive>] ) -> lOldActive 
+HB_BackGroundAdd( <bAction>, [<nMillisecs>], [<lActive>] ) -> nTaskHandle 
+HB_BackGroundDel( <nTaskHandle> ) -> bAction 
+HB_BackGroundReset( ) -> NIL 
+HB_BackGroundRun( [<nTaskHandle>] ) -> NIL 
+HB_BackGroundTime( <nTaskHandle>, [<nNewInterval>] ) -> nOldInterval 
+HB_BitAnd( <nInteger1>, <nInteger2> ) -> nResult 
+HB_BitIsSet( <nInteger>, <nPosition> ) -> lBitIsSet 
+HB_BitNot( <nInteger> ) -> nResult 
+HB_BitOr( <nInteger1>, <nInteger2> ) -> nResult 
+HB_BitReset( <nInteger>, <nPosition> ) -> nResult 
+HB_BitSet( <nInteger>, <nPosition> ) -> nResult 
+HB_Bitshift( <nInteger>, <nShift> ) -> nResult 
+HB_BitXOr( <nInteger1>, <nInteger2> ) -> nResult 
+HB_BuildDate( ) -> cDateTime 
+HB_BuildInfo( <nWhichInfo> ) -> cBuildInfo 
+HB_CheckSum( <cString> ) -> nAdler32 
+HB_CmdArgArgV( ) -> cExeFile 
+HB_Compiler( ) -> cCompilerVersion 
+HB_CRC32( <cString> ) -> nCRC32 
+HB_Crypt( <cString>, <cKey> ) -> cEncryptedString 
+HB_Decrypt( <cEncryptedString>, <cKey> ) -> cString 
+HB_DeSerialize( <cBinary> ) -> xValue 
+HB_EnumIndex( ) -> nIteration 
+HB_ExecFromArray( <aExecutableArray> ) 
+HB_Exec( <nFunctionPointer>, [<Object>], [<xParamsN>] ) 
+HB_FNameMerge( [<cPath>], [<cFileName>], [<cExtension>] ) -> cResult 
+HB_FNameSplit( <cString>, [<@cPath>], [<@cFileName>], [<@cExtension>] ) -> NIL 
+HB_FReadLine( <nFileHandle>, <@cLine>, [<caEndOfLine>], [<nLineLength>] ) -> nReturn 
+HB_FSize( <cFileName> ) -> nFileSize 
+HB_FTempCreate( [<cTempDir>], [<cPrefix>], [<nFileAttr>], [<@cFileName>] ) -> nFileHandle 
+HB_FuncPtr( <cFuncName> ) -> pFuncPointer 
+HB_GCAll( [<lForce>] ) -> NIL 
+HB_GCStep( ) -> NIL 
+HB_IdleAdd( <bAction> ) -> nTaskHandle 
+HB_IdleDel( <nTaskHandle> ) -> bAction 
+HB_IdleReset( ) -> NIL 
+HB_IdleSleepMSec( [<nNewInterval>] ) -> nOldInterval 
+HB_IdleSleep( <nSeconds> ) -> NIL 
+HB_IdleState( ) -> NIL 
+HB_IsArray( <expression> ) -> lIsArray 
+HB_IsBlock( <expression> ) -> lIsCodeblock 
+HB_IsByRef( <@variable> ) -> lIsByReference 
+HB_IsDate( <expression> ) -> lIsDate 
+HB_IsHash( <expression> ) -> lIsHash 
+HB_IsLogical( <expression> ) -> lIsLogical 
+HB_IsMemo( <expression> ) -> lIsMemo 
+HB_IsNIL( <expression> ) -> lIsNIL 
+HB_IsNull( <expression> ) -> lIsNull 
+HB_IsNumeric( <expression> ) -> lIsNumeric 
+HB_IsObject( <expression> ) -> lIsObject 
+HB_IsPointer( <expression> ) -> lIsPointer 
+HB_IsRegExString( <cString> ) -> lIsRegExComp 
+HB_IsString( <expression> ) -> lIsString 
+HB_KeyPut( <nInkeyCode> ) -> NIL 
+HB_LangSelect( [<cLanguageID>] ) -> cOldLanguageID 
+HB_LibDo( <cFuncName>, [<xParams>] ) -> xResult 
+HB_MacroCompile( <cMacro> ) -> cPCode 
+HB_MD5File( <cFileName> ) -> cMD5 
+HB_MD5( <cString> ) -> cMD5 
+HB_MultiThread( ) -> lIsMultiThread 
+HB_MutexCreate( ) -> pMutexHandle 
+HB_MutexLock( <pMutexHandle> ) -> lSuccess 
+HB_MutexTimeoutLock( <pMutexHandle>, <nWaitMilliSecs> ) -> lSuccess 
+HB_MutexTryLock( <pMutexHandle> ) -> lSuccess 
+HB_MutexUnlock( <pMutexHandle> ) -> NIL 
+HB_ObjMsgPtr( <oObject>, <cMethod> ) -> nMethodPointer 
+HB_OemToAnsi( <cOEM_String> ) -> cANSI_String 
+HB_OsNewLine( ) -> cEndOfLine 
+HB_QSelf( ) -> self 
+HB_QWith( ) -> oObject
+HB_RandomInt( [<nMaxLimit>] ) 
+HB_RandomSeed( [<nSeed>] ) -> NIL 
+HB_Random( <nMinLimit>, <nMaxLimit> ) -> nRandomNumber
+HB_ReadIni( <cFileName>, [<lCaseSens>], [<cDelimiter>], [<lAutoMain>] ) -> hIniData 
+HB_RegExAll( <cRegEx> , <cString>, [<lCaseSensitive>], [<lNewLine>], [<nMaxMatches>], [<nWichMatch>], [<lMatchOnly>] ) -> aAllRegexMatches 
+HB_RegExComp( <cRegEx> , [<lCaseSensitive>], [<lNewLine>] ) -> cBinaryRegEx 
+HB_RegExMatch( <cRegEx> , <cString>, [<lCaseSensitive>], [<lNewLine>] ) -> lFound 
+HB_RegExSplit( <cRegEx>, <cString>, [<lCaseSensitive>, [<lNewLine>], [<nMaxMatches>] ) -> aSplitString 
+HB_RegEx( <cRegEx> , <cString>, [<lCaseSensitive>], [<lNewLine>] ) -> aMatches 
+HB_ResetWith( <oObject> ) -> NIL 
+HB_RestoreBlock( <aCodeblockInfo> ) -> bCodeblock 
+HB_SaveBlock( <bCodeblock> ) -> aCodeBlockInfo 
+HB_Serialize( <xValue> ) -> cBinary 
+HB_SetCodePage( [<cCodePageID>] ) -> cOldCodePageID 
+HB_SetIniComment( <cLineComment>, <cInlineComment> ) -> NIL 
+HB_SetMacro( <nMode>, [<lOnOff>] ) -> lOldSetting 
+HB_SetWith( [<oNewObject>] ) -> oOldObject 
+HB_SizeofCStructure( <aTypes>, [<nAlign>] ) -> nBytes 
+HB_StructureToArray( <cBinary>, <aTypes>, [<nAlign>], [<lRecurse>], <aStructure> ) -> aStructure 
+HB_ThisArray( <pID> ) -> aArray|oObject 
+HB_VMExecute( <cPCode> ) -> xValue 
+HB_VMMode( ) -> nCreationMode 
+HB_WithObjectCounter( ) -> nNestingLevel 
+HB_WriteIni( <cFileName>, <hIniData>, [<cCommentBegin>], [<cCommentEnd>], [<lAutoMain>] ) -> lSuccess 
+HB_XmlErrorDesc( <nErrorCode> ) -> cErrorMessage 
+HClone( <hHash> ) -> hClone 
+HCopy( <hSource>, <hTarget>, [<nStart>], [<nCount>], [<xMode>] ) -> hTarget 
+HDelAt( <hHash>, <nPos> ) -> NIL 
+HDel( <hHash>, <xKey> ) -> NIL 
+Header( ) -> nBytes 
+HEval( <hHash>, <bBlock>, [<nStart>], [<nCount>] ) -> hHash 
+HexToNum( <cHexString> ) -> nNumber 
+HexToStr( <cHexString> ) -> cASCIIstring 
+HFILL( <Hash>, <xValue> ) -> NIL 
+HGetAACompatibility( <hHash> ) -> lIsAssocArray 
+HGetAutoAdd( <hHash> ) -> lIsAutoAdd 
+HGetCaseMatch( <hHash> ) -> lIsCaseSensitive 
+HGetKeyAt( <hHash>, <nPos> ) -> xKey 
+HGetKeys( <hHash> ) -> aKeys 
+HGetPairAt( <hHash>, <nPos> ) -> { xKey, xValue } 
+HGetPartition( <hHash>, [<@nPageSize>], [<@nLevel>] ) -> lIsPartitioned 
+HGetPos( <hHash>, <xKey>) -> nPos 
+HGetVaaPos( <hArray> ) -> aSortOrder 
+HGetValueAt( <hHash>, <nPos> ) -> xValue 
+HGetValues( <hHash> ) -> aValues 
+HGet( <hHash>, <xKey> ) -> xValue 
+HHasKey( <hHash>, <xKey> ) -> lExists 
+HMerge( <hTarget>, <hSource>, [<xMode>]) -> hTarget 
+HScan( <hHash>, <xValue>, [<nStart>], [<nCount>], [<lExact>], [<lASCII>] ) -> nPos 
+HSetAACompatibility( <hHash>, <lToggle> ) -> lSuccess 
+HSetAutoAdd( <hHash>, <lOnOff> ) -> hHash 
+HSetCaseMatch( <hHash>, <lOnOff> ) -> hHash 
+HSetPartition( <hHash>, <nPageSize>, [<nLevel>] ) -> NIL 
+HSetValueAt( <hHash>, <nPos>, <xValue> ) -> NIL 
+HSet( <hHash>, <xKey>, <xValue> ) -> NIL 
+I2Bin( <nNumber> ) -> cInteger 
+If( <lCondition>, <exprTrue>, <exprFalse> ) -> xValue
+IIf( <lCondition>, <exprTrue>, <exprFalse> ) -> xValue
+IndexExt( ) -> cFileExtension 
+IndexKey( <nOrder> ) -> cIndexKey 
+IndexOrd( ) -> nOrder 
+Inkey( [<nWaitSeconds>] [, <nEventMask>] ) -> nInkeyCode 
+Int( <nNumber> ) -> nInteger 
+IsAlNum( <cString> ) -> lIsAlphaNumeric 
+IsAlpha( <cString> ) -> lIsAlphabetic 
+IsAscii( <cString> ) -> lIs7BitChar 
+IsCntrl( <cString> ) -> lIsCtrlChar 
+IsColor( ) -> lIsColor 
+IsDigit( <cString> ) -> lIsDigit 
+IsDirectory( <cDirSpec> ) -> lIsDirectory 
+IsDisk( <cDrive> ) -> lDriveIsReady 
+IsGraph( <cString> ) -> lIs7BitGraphicalChar 
+IsLower( <cString> ) -> lIsLowerCase 
+IsPrinter( [<cPrinterName>] ) -> lIsPrinter 
+IsGraph( <cString> ) -> lIs7BitPrintableChar 
+IsPunct( <cString> ) -> lIsPunctuationChar 
+IsSameThread( <pThreadHandle1>, <pThreadHandle2> ) -> lIsSameThread 
+IsSpace( <cString> ) -> lIsWhiteSpaceChar 
+IsUpper( <cString> ) -> lIsUpperCase 
+IsValidThread( <xValue> ) -> lIsValid 
+IsXDigit( <cString> ) -> lIsHexDigit 
+JoinThread( <pThreadHandle> ) -> NIL 
+KillAllThreads( ) -> NIL 
+KillThread( <pThreadHandle> ) -> NIL 
+L2Bin( <nNumber> ) -> cInteger 
+LastKey( [<nEventMask>] ) -> nLastInkeyCode 
+LastRec( ) -> nRecords 
+Left( <cString>, <nCount> ) -> cSubString 
+LenNum( <nNumber> ) -> nLength 
+Len( <xValue> ) -> nCount 
+LibFree( <pDllHandle> ) -> lSuccess 
+LibLoad( <cDllFile> ) -> pDLL 
+LoadLibrary( <cDLLFile> ) -> nDllHandle 
+Log( <nNumber> ) -> nNaturalLog 
+Lower( <cString> ) -> cLowerCaseString 
+LTrim( <cString> ) -> cTrimmedString 
+LUpdate( ) -> dLastChange 
+MakeDir( <cDirectory> ) -> nOSError 
+MaxCol( ) -> nColumn 
+MaxRow( ) -> nRow 
+Max( <Value1>, <Value2> ) -> LargerValue
+MCol( ) -> nMouseCol 
+MDblClk( [<nNewInterval>] ) -> nMilliSeconds 
+MemoEdit( [<cString>], [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<lEditMode>], [<cUserFunc>], [<nLineLen>], [<nTabSize>], [<nBufferRow>], [<nBufferCol>], [<nRowOffset>], [<nColOffset>] ) -> cTextBuffer 
+MemoLine( <cString>, [<nLineLen>], [<nLineNum>], [<nTabSize>], [<lWrap>], [<lLongLines>], [<@nOffSet>] ) -> cTextLine 
+MemoRead( <cFileName> ) -> cString 
+Memory( <nWhichMemory> ) -> nMemoryUsage 
+MemoTran( <cString> , [<cReplaceHardCRLF>], [<cReplaceSoftCRLF>] ) -> cNewString 
+MemoWrit( <cFileName>, <cString> ) -> lSuccess 
+MemVarBlock( <cMemVarName> ) -> bMemVarBlock 
+MenuModal( <oTopBarMenu>, [<nStartItem>], [<nMsgRow>], [<nMsgLeft>], [<nMsgRight>], [<cMsgColor>], [<GetList> ) -> nMenuItemID 
+MHide( ) -> NIL 
+Min( <Value1>, <Value2> ) -> nSmallerValue
+MLCount( <cString>, [<nLineLen>], [<nTabSize>], [<lWrap>], [<lLongLines>] ) -> nLineCount 
+MLCToPos( <cString>, [<nLineLen>], [<nTextRow>], [<nTextCol>], [<nTabSize>], [<lWrap>], [<lLongLines>]) -> nPosition 
+MLeftDown( ) -> lLeftButtonIsPressed 
+MlPos( <cString>, [<nLineLen>, [<nLineNum>], [<nTabSize>], [<lWrap>], [<lLongLines>] ) -> nPosition 
+Mod( <nDividend>, <nDivisor> ) -> nRemainder 
+Month( <dDate> ) -> nMonth 
+MPosToLC( <cString>, [<nLineLen>], [<nCharPos>], [<nTabSize>], [<lWrap>], [<lLongLines>]) -> { nTextRow, nTextCol } 
+MPresent( ) -> lMouseIsPresent 
+MRestState( <cSavedState> ) -> NIL 
+MRightDown( ) -> lRightButtonIsPressed 
+MRow( ) -> nMouseRow 
+MSaveState( ) -> cSavedState 
+MSetBounds( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> NIL 
+MSetCursor( [<lOnOff>] ) -> lPreviousSetting 
+MSetPos( <nRow>, <nCol> ) -> NIL 
+MShow( ) -> NIL 
+NetErr( [<lNewStatus>] ) -> lIsNetworkError 
+NetName( [<lInfo>] ) -> cComputerName | cUserName 
+NextKey( [<nEventMask>] ) -> nNextInkeyCode 
+NotifyAll( <pMutexHandle> ) -> NIL 
+Notify( <pMutexHandle>, [<xValue>] ) -> NIL 
+NumButtons( ) -> nButtonCount 
+NumToHex( <nNum_or_pPointer>, [<nLen>]) -> cHexString 
+OrdBagExt( ) -> cFileExtension 
+OrdBagName( [<nOrder_or_cIndexName>] ) -> cIndexFilename 
+OrdCondSet( [<cForCondition>], [<bForCondition>], [<lAllRecords>], [<bWhileCondition>], [<bEval>] , [<nInterval>], [<nStart>] , [<nNext>] , [<nRecord>], [<lRest>] , [<lDescend>], [<reserved>], [<lAdditive>], [<lCurrent>], [<lCustom>], [<lNoOptimize>], [<lUseFilter>], [<lExclusive>] ) -> lSuccess 
+OrdCount( [<cIndexFile>] ) -> nOpenIndexes 
+OrdCreate( <cIndexFile>, [<cIndexName>], <cIndexExpr>, <bIndexExpr>, [<lUnique>] ) -> NIL 
+OrdCustom( [<cIndexName> | <nOrder>], [<cIndexFile>] , [<lNewCustomFlag>] ) -> lOldCustomFlag 
+OrdDescend( [<cIndexName> | <nOrder>], [<cIndexFile>] , [<lNewDescendFlag>] ) -> lOldDescendFlag 
+OrdDestroy( <cIndexName> [, <cIndexFile>] ) -> NIL 
+OrdFindRec( <nRecno>, [<lCurrentRec>] ) -> lFound 
+OrdFor( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> cForExpression 
+OrdIsUnique( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> lUniqueFlag 
+OrdKeyAdd( [<nOrder_or_cIndexName>], [<cIndexFile>] , [<xIndexValue>] ) -> lSuccess 
+OrdKeyCount( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> nKeyCount 
+OrdKeyDel( [<nOrder_or_cIndexName>], [<cIndexFile>] , [<xIndexValue>] ) -> lSuccess 
+OrdKeyGoTo( <nIndexKeyNo> ) -> lSuccess 
+OrdKeyNo( [<nOrder_or_cIndexName>], [<cIndexFile>] ) -> nOrdKeyNo 
+OrdKeyRelPos( [<nNewPosition>] ) -> nRelativePosition 
+OrdKeyVal( ) -> xIndexValue 
+OrdKey( [<nOrder_or_cIndexName>][, <cIndexFile>] ) -> cIndexKey 
+OrdListAdd( <cIndexFile> ) -> NIL 
+OrdListClear( ) -> NIL 
+OrdListRebuild( ) -> NIL 
+OrdName( [<nOrder>], [<cIndexFile>] ) -> cIndexName 
+OrdNumber( [<cIndexName>], [<cIndexFile>] ) -> nOrder 
+OrdScope( <nScope>, [<xNewValue>] ) -> xOldValue 
+OrdSetFocus( [<nOrder_or_cIndexName>], [<cIndexFile>] ) -> cOldIndexName 
+OrdSetRelation( <nArea_or_cAlias>, <bRelation>, [<cRelation>] ) -> NIL 
+OrdSkipRaw( [<nRecords>] ) -> NIL 
+OrdSkipUnique( [<nDirection>] ) -> lSuccess 
+OrdWildSeek( <cWildCardString>, [<lCurrentRec>], [<lBackwards>] ) -> lFound 
+OS( ) -> cOsName 
+Os_IsWin2000( ) -> lIsWin2000 
+Os_IsWin2000_Or_Later( ) -> lIsWin2000_Or_Later 
+Os_IsWin2003( ) -> lIsWin2003 
+Os_IsWin95( ) -> lIsWin95 
+Os_IsWin98( ) -> lIsWin98 
+Os_IsWin9X( ) -> lIsWin9X 
+Os_IsWinME( ) -> lIsWinME 
+Os_IsWinNT351( ) -> lIsWinNT351 
+Os_IsWinNT4( ) -> lIsWinNT40 
+Os_IsWinNT( ) -> lIsWinNT 
+Os_IsWinVISTA( ) -> lIsWinVista 
+Os_IsWinXP( ) -> lIsWinXP 
+Os_IsWtsClient( ) -> lIsWtsClient 
+Os_VersionInfo( ) -> aVersionInfo 
+OutErr( <expression> ) -> NIL 
+OutStd( <expression> ) -> NIL 
+PadC( <expression>, <nLength>, [<cFillChar>] ) 
+PCol( ) -> nColumn 
+PCount( ) -> nParamCount 
+PrinterExists( <cPrinterName> ) -> lInstalled 
+PrinterPortToName( <cPortName> ) -> cPrinterName 
+PrintFileRaw( <cPrinterName>, <cFileName>, [<cJobTitle>] ) -> nErrorCode 
+ProcFile( [<nCallStack>] ) -> cPrgFilename 
+ProcLine( [<nCallStack>] ) -> nPrgLineNumber 
+ProcName( [<nCallStack>] ) -> nProcName 
+PRow( ) -> nRow 
+PValue( <nParamPos> ) -> xParamValue 
+QOut( [<expression>] ) -> NIL
+QQOut( [<expression>]) -> NIL
+QueryRegistry( <nHKEY>, <cRegPath>, <cRegKey>, <xValue>, [<lCreate>] ) -> lExists 
+RAscan( <aArray>, <xbSearch>, [<nStart>], [<nCount>], [<lExact>], [<lASCII>] ) -> nElement 
+RAt( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) -> nPos 
+RddInfo( <nDefine>, [<xNewSetting>], [<cRddName>] ) -> xOldSetting 
+RddList( [<nRddType>] ) -> aRDDNames 
+RddName( ) -> cRDDName 
+RddSetDefault( [<cNewRDD>] ) -> cOldRDD 
+ReadModal( <GetList>, [<nStartGet>], [<oTopBarMenu>], [<nMsgRow>], [<nMsgLeft>], [<nMsgRight>], [<cMsgColor>] ) -> lUpDated 
+RecCount( ) -> nRecords 
+RecNo( ) -> nRecord 
+RecSize( ) -> nBytes 
+Replicate( <cString>, <nCount> ) -> cReplicatedString 
+RestScreen( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], <cScreen> ) -> NIL 
+Right( <cString>, <nCount> ) -> cSubString 
+RLOCK( ) -> lIsLocked 
+Round( <nNumber>, <nDecimals> ) -> nRounded 
+Row( ) -> nRowPos 
+RTrim( <cString>, [<lAllWhiteSpace>] ) -> cTrimmedString
+SaveScreen( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> cScreen 
+Scroll( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<nRows>], [<nColumns>] ) -> NIL 
+SecondsSleep( <nSeconds> ) -> NIL 
+Seconds( ) -> nSeconds 
+Secs( <cTime> ) -> nSeconds 
+Select( [<cAlias>] ) -> nWorkArea 
+SetBlink( [<lOnOff>] ) -> lOldSetting 
+SetCancel( [<lOnOff>] ) -> lOldSetting 
+SetColor( [<cNewColorString>] ) -> cOldColorString 
+SetCursor( [<nNewCursorShape>] ) -> nOldCursorShape 
+SetErrorMode( [<nNewErrorMode>] ) -> nOldErrorMode 
+SetKey( <nInkeyCode>, [<bNewCodeblock>] ) -> bOldCodeblock 
+SetLastError( <nNewErrorCode> ) -> nOldErrorCode 
+SetMode( <nRowCount>, <nColCount> ) -> lSuccess 
+SetMouse( [<lOnOff>], [<nRow>], [<nCol>] ) -> lIsMouseVisible 
+SetPos( <nRow>, <nCol> ) -> NIL 
+SetPrc( <nRow>, <nCol> ) -> NIL 
+SetRegistry( <nHKEY>, <cRegPath>, <cRegKey>, <xValue> ) -> lSuccess 
+Set( <nDefine>, [<xNewSetting>], [<xOption>] ) -> xOldSetting 
+SoundEx( <cString> ) -> cSoundex 
+Space( <nCount> ) -> cSpaces 
+SQrt( <nNumber> ) -> nSquareRoot 
+StartThread( <bBlock_or_cFuncName_or_pFuncPtr>, [<xParams>] ) 
+StoD( [<cDate>] ) -> dDate 
+StopThread( <pThreadHandle>, [<pMutexHandle>] ) -> NIL 
+StrToHex( <cString>, [<cSeparator>] ) -> cHexString 
+StrTran( <cString>, <cSubString>, [<cReplace>], [<nStart>], [<nCount>] ) -> cNewString 
+StrZero( <nNumber>, [<nLength>], [<nDecimals>] ) -> cString 
+Str( <nNumber>, [<nLength>], [<nDecimals>], [<lTrim>] ) -> cString 
+Stuff( <cString>, <nStart>, <nDelete>, <cInsert> ) -> cNewString 
+SubscribeNow( <pMutexHandle>, <nWaitMilliSecs>, [<@lNotified>] ) -> xReturn 
+Subscribe( <pMutexHandle>, <nWaitMilliSecs>, [<@lNotified>] ) -> xReturn 
+SubStr( <cString>, <nStart>, [<nCount>] ) -> cSubstring 
+TBMouse( <oTBrowse>, <nMouseRow>, <nMouseCol> ) -> nHandled 
+TBrowseDB( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> oTBrowse 
+TBrowseNew( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) -> oTBrowse 
+ThreadSleep( <nMilliSeconds>, [<lNoCpu>] ) -> NIL 
+Throw( <oError> ) -> NIL 
+Time( ) -> cHHMMSS 
+Tone( <nFrequency>, [<nDuration>] ) -> NIL 
+TraceLog( <xVariables> ) -> lTrue 
+Transform( <xValue>, <cPicture> ) -> cFormattedString 
+Trim( <cString>, [<lAllWhiteSpace>] ) -> cTrimmedString
+RTrim( <cString>, [<lAllWhiteSpace>] ) -> cTrimmedString
+TString( <nSeconds> ) -> cTimeString 
+Type( <cMacroExpr> ) -> cDataType 
+U2bin( <nNumber> ) -> cInteger 
+Upper( <cString> ) -> cUpperCaseString 
+Used( ) -> lIsUsed 
+ValToPrgExp( <xValue> ) -> cMacroExpression 
+ValToPrg( <xValue> ) -> cPRGcode 
+Valtype( <expression >) -> cDataType 
+Val( <cNumber> ) -> nNumber 
+Version( ) -> cVersion 
+W2Bin( <nNumber> ) -> cInteger 
+WaitForThreads( ) -> NIL 
+WildMatch( <cPattern>, <cString>, [<lFullMatch>] ) -> lFound 
+Word( <nNumber> ) -> nInteger 
+Year( <dDate> ) -> nYear 
+
+/*
+ * FiveWin Functions -- from FWFUN.CHM, by Vailton Renato
+ * 18/5/2007 13:04:29
+ */
+aAt( <aSearch>, <cTarget> ) -> <nPos> 
+ABrwPosRec( <hWnd>, <nRow>, <aSizes>, <nFirstItem>, <nCol>, <hFont> ) -> aCoors 
+aDrives( [<nType>] ) ->aDrives  
+aGetPrinters( ) -> <aPrinters>  
+AnimOpen( <hWnd>, <cAviFileRes> ) -> <lSuccess> 
+AnimOpenEx( <hWnd>, <hInstance>, <cAviFileRes> ) -> lSuccess 
+AnimPlay( <hWnd>, <nFrom>, <nTo>, <nRepeat> ) -> lSuccess 
+AnsiToOem( <cWindowText> ) -> <cOemText>  
+AnsiToWide( <cAnsiStr> ) -> <cWideStr>  
+ARead( <cInfo> )-> aArray  
+ASave( <aArray> ) -> cInfo  
+ASend( <aArray>, <cMsg>, <uParam1>, ..., <uParamN> ) 
+ATang( <nTang> ) -> nAngle  
+aWBrwRowDim( <hWnd>, <nRow>, <hFont> ) -> aCoords 
+B2Bin( <nValue> ) -> <cValue>  
+BarAdjust( <hWnd>, <nMode>, <lMsgBar>, <nHeight> ) -> nil  
+BinToC( <aBin>, <lSep> ) -> <cValue>  
+BinToN( <aBin> ) -> <nValue>  
+Browse( <cTitle>, <cListName>, <bNew>, <bModify>, <bDelete>,  <bSearch>, <bList>, <aColSizes> ) -> nil  
+BuildCommDCB( <cInfoDef>, @<cDevBlock> ) -> lSuccess  
+CaretFLine( <hWnd>, <hDC>, <nRow>, <nCol>, <nMargin>, <nAlign>, <aText>, <aFonts>, [<nPos>], <lInsert>, <lVisible> ) -> nil 
+ChildLevel( <oObject>, <oClass> ) -> nResult  
+ChooseFont( <aPreviousFont>, <@nRGBColor>, <hPrinterDC>, <nFlags> ) -> <aFont>  
+CloseEnhMetaFile( <hDC> ) -> hEMF 
+cMidiMapper( ) -> cMapperName 
+ConnectTo( <nSocket>, <nPort>, <cIPAddr ) -> nRetCode 
+Cos( <nAngle> ) -> nCos  
+CreateBmpCursor( <hBitmap>, <hPalette>, <nHotRow>, <nHotCol>, <lInterval>, <aBlack>, <aWhite>, <aTransparent>, <aInverted> ) -> hCursor 
+CreateEnhMetaFile( <nReserved>, <cFileName> ) -> hDC 
+CreateFont( <aFontDescription> ) -> <hFont>  
+CreateMetaFile( <cFileName> ) -> hDC 
+CtrlDrawFocus( <hWnd>, <nOriginRow>, <nOriginCol>, <nMRow>, <nMCol>, <nMResize> ) -> nil  
+CursorDrag( ) -> nil  
+CursorStop( ) -> nil  
+DbSetFilte( <x>, <y> ) -> nil  
+DDECreateDataHandle( <hInst>, <cBuffer>, <nLen>, <nOffset>, <nItem>, <nClipFmt>, <nFlags> ) -> hData  
+DDECreateStringHandle( <hInst>, <cText>, <nCodePage> ) -> hText  
+DDEGetLastError( <hInst> ) -> nError  
+DDEServer( <nType>, <nFmt>, <hConv>, <hSz1>, <hSz2>, <hData>, <hData1>, <hData2> ) 
+DecToHex( <nValue> ) -> cHex  
+DeleteEnhMetaFile( <hEMF> ) -> lSuccess 
+Caret( ) -> nil  
+DiskChange( <cDrive> ) -> lSuccess 
+DispFontPerSize( ) -> nRatio  
+DragQueryFiles( <hDrop> ) -> aFiles  
+DrawFGetLine( <hWnd>, <hDC>, <nRow>, <nMargin>, <nAlign>, <aText>, <aFonts>, <aColors>, <nClrPane>, <aBlock>, <nCtrl> ) -> nCtrl 
+DrawIconFocus( <hDC>, <nRow>, <nCol>, <hIcon> ) -> <lSuccess>  
+DrawSelector( <hDC>, <nRow>, <nCol>, <nRadius>, <nRowPos>, <nColPos>, <aMarks>, <nClrBtn>, <nClrMarks> -> nil  
+DrawSlider( <hDC>, <nRow>, <nCol>, <nPos>, <nLong>, <aMarks>, <nOrientation>, <nDirection>, <nClrBtn>, <nClrMarks> -> nil  
+DrawText( <hDC>, <cText>, <aRect>, <nStyle> ) -> <nTextHeight>  
+ExtDrawIcon( <hDC>, <nRow>, <nCol>, <hIcon>, <cPrompt>, <hFont>, <nClrText>, <nClrPane>, <lFocused>, <lActive>, <lEdit> ) -> aCoors 
+FCommit( <hFile> ) -> nil 
+FDate( <cFileName> ) -> <dFileDate>  
+FindIcon( <cIconName> ) -> lFound 
+FloodFill( <hDC>, <nXStart>, <nYStart>, <nRGBColor>, <nPaintColor> ) -> <lSuccess>  
+FoldPaint( <hWnd>, <hDC>, <aPrompts>, <hFont1>, <hFont2>, <nClrPane>, <nOption>, <aEnable>, <nSize>, <lWin95>, <nFdHeight> ) -> nil  
+FormatFLine( <aText>, <aFonts>, <aColors>, <nPos> )  -> { hFont, nColor } 
+FrameDot( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) -> nil  
+FreeResources( ) -> nil  
+FTime( <cFileName> ) -> <cFileTime>  
+FWDispBegin( <hWnd>, <hDC> ) -> aInfo 
+FWDispEnd( <aInfo> ) -> hDC 
+GetAllWin( ) -> aWindows  
+GetClassInfo( <hInstance>, <cClassName> ) -> aInfo  
+GetCursorDrag( ) -> hCursor  
+GetCursorHand( ) -> hCursor  
+GetCursorStop( ) -> hCursor  
+GetDatePick( <hWnd> ) -> dDate 
+GetEnhMetaFile( <cMetaFile> ) -> hEMF 
+GetFClipData( <hWnd> ) -> cGTF 
+GetFontNames( <hDC> ) -> <aFontName>  
+GetFreeSystemResources( [<nType>] ) -> nPercentage 
+GetHostByAddress( <cIPAddress> ) -> cHostName  
+GetLabelDim( <hWnd>, <cText>, <hFont> ) -> aDim  
+GetLastError( ) -> nError  
+GetMenuString( <hMenu>, <nId>, <nFlags> ) -> cText  
+GetMItemCount( <hMenu> ) -> nItems  
+GetModuleHandle( <cModuleName> ) -> hModule  
+GetPEnhMetaFile( <cMetaFile>, <@aInfo> ) -> hEMF 
+GetPMetaFile( <cMetaFile>, <@aInfo> ) -> hMeta 
+GetPrintDC( <hWnd> ) -> hDC 
+GetPrintDefault( ) -> hDC 
+GetProfInt( <cSection>, <cEntry>, <nDefault> ) -> <nValue>  
+GetPromptRect( <hDC>, <cPrompt>, <hFont> ) -> aRect 
+GetPvpProfString( <cSection>, <cEntry>, <cDefault>, <cIniFile> ) -> <cValue>  
+GetPvProfInt( <cSection>, <cEntry>, <nDefault>, <cIniFile> ) -> <nValue>  
+GetScrollPos( <hWnd>, <nFlags> ) -> nPos  
+GetScrollRange( <hWnd>, <nFlags> ) -> aRange  
+GetTextHeight( <hWnd>, [<hDC>] ) -> <nFontHeight>  
+GetViewportOrgEx( <hDC>, <aPoint> ) -> lSuccess 
+GetWindow( <hWnd>, <nRelationShip> ) -> hWnd 
+GetWindowDC( <hWnd> ) -> hDC 
+GetWindowLong( <hWnd>, <nType> ) -> nValue 
+GetWindowOrgEx( <hDC>, <aPoint> ) -> lSuccess 
+GetWindowsDirectory( ) -> <cWinPath>  
+GetWindowText( <hWnd> ) -> cText 
+GetWinVer( ) -> aVersion 
+GetWndDefault( ) -> oWnd  
+GlobalDelAtom( <hAtom> ) -> hAtom 
+GTFToRTF( <cGTF> ) -> cRTF  
+GTFToTxt( <cGTF> ) -> cTxt  
+HeightFLine( <hDC>, <aText>, <aFonts>, [<nPos>] ) -> nHeight 
+HelpCtrlhWnd( <pHelpInfo> ) -> hCtrlWindow 
+HelpIndex( )     Parameters     None     Returns     Nothing     Description   HelpIndex( ) Shows the main index of the default selected Help file.     Source:    SOURCE-> WINAPI-> HELP.C  
+HelpPopup( [<nHelpId>]) -> nil  
+HelpSetPos( <nRow>, <nColumn>, <nWidth>, <nHeight>, <nMax> ) 
+Hex2Str( <cHex> ) -> cString 
+HTMLHelp( <hWnd>, <cChmFile>, <nCommand>, <nTopic> ) -> hChmWnd  
+IlAdd( <hImageList>, <hImage>, <hMask> ) -> nImage 
+IlAddIcon( <hImageList>, <hIcon> ) -> nImage 
+IlAddMasked( <hImageList>, <hImage>, <nClrMask> ) -> nImage 
+IlCreate( <nWidth>, <nHeight> ) -> hImageList 
+IlDestroy( <hImageList> ) -> lSuccess 
+IlSetBkColor( <hImageList>, <nColor> ) -> nPrevColor 
+ImportRawFile( <hDC>, <cFile> ) -> nil 
+InterruptRegister( <bAction> ) -> <lSuccess>  
+IsExeRunning( <cExeName> ) -> lRunning 
+IsGTF( <cText> ) -> lGTF  
+IsRTF( <cText> ) -> lRTF  
+IsWindow( <hWnd> ) -> lWindow  
+IsWindowEnabled( <hWnd> ) -> lEnabled  
+IsWinXP( ) -> lWinXP  
+JoySetCapture( <hWnd>, <nIdJoy>, <nPollingMS>, <lChanged> ) -> nRetCode  
+L2Hex( <nLong> ) -> <cHex>  
+LastItemPos( ) -> nPos  
+LenFLine( <hDC>, <aText>, <aFonts>, [<nWidth>], [<lRound>] ) -> nLen 
+Loadaccelerators( <hInst>, <cAccName> ) -> hAccelerators  
+LocalCount( <nProcLevel> ) ->nVars  
+LogStack( ) -> nil  
+LvInsertItem( <hWnd>, <nImageList>, <cText> ) -> nItem 
+LZCopyFile( <cFileSource>, <cFileTarget> ) -> <lSuccess>  
+MakeIntResource( <nValue> ) -> nResult 
+MakeWin( ) -> nil  
+MapDialogRect( <hDlg>, <aRect> ) -> nil  
+MAPIAddress( [<cCaption>], [<cLabels>], [<nEditFields>], [<aDefaultAddress>] ) -> nil 
+MAPIDeleteMail( [<cMsgId>] ) -> nRetCode 
+MAPIFindNext( [<cMsgType>], [<nFlags>], [<cSeedMsgID>] ) -> cMsgId 
+MAPILogoff( ) -> lSuccess 
+MAPILogon( [<cUsername>], [<cPassword>], [<nFlags>] ) -> nRetCode 
+MAPIReadMail( [<cMsgId>], [<nFlags>] ) -> aRet 
+MAPIResolveName( [<cName>] ) -> cAddress 
+MAPISendMail( <cFilename> ) -> nRetCode 
+MAPISendMail( [<cSubject>], [<cNoteText>], [<cMsgType>], [<cDateReceived>], [<cConversationID>], [<lReceipt>], [<lFromUser>], [<aOrigin>], [<aRecipients>], [<aFiles>] ) -> nRetCode 
+MCIGetErrorString( <nErro> ) -> cString  
+MCISendCommand( <nIdDev> , <cCommand> , <nFlags> , <cParam>  ) -> nError  
+MCISendString( <cCommandStr> , <@Buffer> , <hWnd>) -> nError  
+MdiCtrlAdjust( <hWnd> , <hCtrl> , <nBarHeight> ) -> nil  
+MDIRecEdit( <cTitle> , <oIcon> , <nTop> , <nLeft> , <nBottom> , <nRight> ) -> oWnd  
+MeasureItem( <nPMeasureItemStruct>, <nHeight> ) -> <lSuccess>  
+MemoEdit( <cText> , <cTitle> , <nTop> , <nLeft> , <nBottom> , <nRight> ) -> lOk  
+MemStat( ) -> nil  
+MenuAddItem( <cPrompt>, <cMsg>, <lChecked>, <lActive>, <bAction>, <cBmpFile>, <cResName>, <oMenu>, <bBlock>, <nVKState>, <nVirtKey>, <lHelp>, <nHelpId>, <bWhen>, <lBreak> ) -> <oMenuItem>  
+MenuBegin( <lPopup>, <lSystem>, <oWnd> ) -> <oMenu>  
+MenuDrawItem( <pDrawItemStruct> , <cPrompt> , <lTop> , <hBitmap> ) -> nil  
+MenuEnd( ) -> <oMenu>  
+MenuMeasureItem( <pMeasureItemStruct>n , <nLen> ) -> nil  
+MessageBeep( <nType> ) -> nil 
+MessageBox( <hWnd>, <cText>, <cTitle>, <nStyle> ) -> <nRetValue>  
+MeterPaint( <hWnd>, <hDC>, <nActual>, <nTotal>, <nPercentage>, <cText>, <lPercentage>, <nClrPane>, <nClrText>, <nClrBar>, <nClrBackText>, <hFont> ) -> 0  
+MGetCreate( <cClassName>, <cTitle , <nStyle>, <nLeft> , <nTop>, <nWidth> , <nHeight>, <hWndOwner> , <hMenu>, <cExtraData> ) -> hWnd  
+MGetLine( <hMultiGet>, <nLine> ) 
+MGetReplace( <hMultiGet>, <cText> ) 
+MidiNoteOff( <hMidi>, <nChanel>, <nOct>, <nNote>, <nVel>)-> uReturn  
+MidiNoteOn( <hMidi>, <nChanel>, <nOct>, <nNote>, <nVel>)-> uReturn  
+MidiSetPatch( <hMidi>, <nChannel>, <nVoice> ) -> nReturn 
+MimeExt( <cExt> ) -> cType  
+ModifyMenu( <hMenu>, <nIdItem>, <nFlags>, <nIdNewItem> , <cnNewItem>) -> lSuccess  
+MoreHeap( <nSize> ) -> nil  
+MoveCalendar( <oDlg>, <nModo> ) 
+MoveFile( <cFileSource>, <cFileTarget> ) -> <lSuccess>  
+MoveGet( <hWnd> ) -> nil  
+MoveTo( <hDC>, <nCol>, <nRow> ) -> <nLOldPos>  
+MoveWindow( <hWnd>, <nTop>, <nLeft>, <nWidth>, <nHeight>, <lRepaint> ) -> <lSuccess>  
+MsgAbout( <cMsg> [, <cTitle>] ) -> nil  
+MsgAlert( <cMsg> [, <cTitle>] ) -> nil  
+MsgBeep( ) -> nil  
+MsgDate( <dDate>, <cPrompt>, <oGet> ) -> dDate  
+MsgGet( <cTitle>, <cText>, @<uVar> [, <cBmpFile>] [, <cResName>] ) -> <lOk>  
+MsgInfo( <cMsg> [, <cTitle>] ) -> nil  
+MsgLogo( <cLogoFile>, [<nSeconds>] ) -> nil  
+MsgMeter( <bAction> [, <cMsg>] [, <cTitle>] ) -> nil  
+MsgNoYes( <cMsg>, <cTitle> ) -> <lYesNo>  
+MsgPaint( <hWnd>, <cMsg>, <cMsgDef>, <lErase>, <lCentered>, <nSize>, <nClrFore>, <nClrBack>, <hFont>, <lInset> )-> nil  
+MsgRetryCancel( <cMsg>, <cTitle> ) -> lRetry  
+MsgRun( <cMsg> [, <cTitle>], [<bAction>] ) -> nil  
+MsgSound( <cSndName>, <nMode> ) -> lSuccess  
+MsgStop( <cMsg> [, <cTitle>] ) -> nil  
+MsgToolBar( <oWndParent>, <cTitle>, <aActions>, <aBmps1>, <aBmps2> ) -> nil  
+MsgWait( <cMsg> [, <cTitle>], [<nSeconds>] ) -> nil  
+MsgYesNo( <cMsg>, <cTitle> ) -> <lYesNo>  
+nAnd( <nValue1>, <nValue2> [, ...<nValueN>] ) -> <nResult>  
+nArgC( ) -> <nInitParams>  
+nBmpColors( <hPalette> ) -> nColors  
+nBmpHeight( <hBitmap> ) -> nHeight  
+nBmpWidth( <hBitmap> ) -> nWidth  
+nColorToN( <cColor> ) -> <nColor>  
+nDbl2Flt( <nDouble> ) -> nFloat  
+nDDEGetErrorString( <nErrorCode> ) -> cErrorString  
+NDdeShareAdd( <cServer>, <nLevel>, <aNDdeShareInfo> ) -> nRetCode  
+NDdeShareDel( <cServer>, <cName> ) -> nRetCode  
+NDdeShareSetInfo( <cServer> , <cName> , <nLevel> , <aNDdeShareInfo> , ) -> nRetCode  
+nDlgBox( <cDlgName> ) -> <nResult> 
+NetSerialNumber( ) -> cSerial  
+NextDlgTabItem( <hWndDlg>, <hControl>, <lNext> ) -> <hNextControl>  
+nExtMem( ) -> nMemory  
+nFileCrc( <cFileName> ) -> nCRCValue  
+nGetBackRgb( <cColor> ) -> <nBackRGB>  
+nGetFileFilter( ) -> <nFilter>  
+nGetForeRgb( <cColor> ) -> <nForeRGB>  
+nHex( <cHex> ) -> nResult  
+nHiByte( <nWord> ) -> <nHiByte>  
+nHiWord( <nLong> ) -> <nHiWord>  
+nIcons( <cFileName> ) -> <nIcons>  
+nLoByte( <nWord> ) -> <nLoByte>  
+nLoWord( <nLong> ) -> <nLoWord>  
+nMakeLong( <nLoWord>, <nHiWord> ) -> <nLong>  
+nMciOpen( <cDeviceType>, <cElement> ) -> nId  
+nMciPlay( <nIdDevice> , <nFrom> , <nTo> , <hWnd> ) 
+nMciWindow( <nIdDevice>, <hWnd> ) -> nError  
+nMidiDevices( ) -> nDevs  
+nMsgBox( <cMsg> [, <cTitle>] [, <nStyle>] ) -> <nResult>  
+nNot( <nOp1> ) -> nResult  
+nOr( <nValue1>, <nValue2> [, ...<nValueN>] ) -> <nResult>  
+nPtrWord( <nAddress> ) -> nValue 
+nRandom( [<nRange>] ) -> <nRandom>  
+nRGB( <nRed>, <nGreen>, <nBlue> ) -> <nRGB>  
+nRGBBlue( <nRGBColor> ) -> nBlue  
+nRGBGreen( <nRBGColor> ) -> nGreen  
+nRGBRed( <nRGBColor> ) -> nRed  
+nSerialA( ) -> nSerial  
+nSerialHD( [<cDrive>] ) -> nSerialHD  
+nStatics( ) -> nVars  
+nStrCrc( <cText> ) -> n 
+nStrHash( <cString>, <nHashRange> ) -> <nHashValue>  
+nTcwRow( <hWnd>, <hDC> , <nGraphRow>, <hFont> ) -> nTextRow  
+nToBin( <nValue> ) -> <aBin>  
+NtxPos( <nIndexOrd>, <nRecNo> ) -> <nRelativeRecNoPos>  
+nTxtLines( <cFileName> ) -> nLines  
+nWindows( ) -> nWnds  
+nWndChrHeight( <hWnd>, <hFont> ) -> nHeight  
+nWRow( <hWnd>, <hDC>, <nGraphRow> [, <hFont>] ) -> <nTextRow>  
+nWRows( <hWnd>, <hDC> [, <hFont>] ) -> <nTextRows>  
+nXOr( <nOp1>, ... ) -> lRet  
+OClone( <oObject> ) -> <oClonedObject>  
+OdbcDsnEntries( [<cSection>] ) -> aEntries 
+OemToAnsi( <cOemText> ) -> <cWindowText>  
+OpenClipboard( <hWnd> ) -> f <lSuccess>  
+OpenComm( <cCommName> [, <nSizeIn>] [, <nSizeOut>] ) -> <nIdComm>  
+ORead( <cInfo> ) -> oBjeto  
+OSend( <oObject>, <cMsg> [, <uParam1>, ...<uParamN>] ) -> <uReturnedValue>  
+OutportByte( <nPort>, <nByte> ) -> nil  
+OutportWord( <nPort>, <nWord> ) -> nil  
+OutputDebugWindow( <cText> ) -> nil  
+PageBegin( ) -> nil  
+PageEnd( ) -> nil  
+Paint3D( <hWnd> ) -> nil  
+PalBmpDraw( <hDC>, <nRow>, <nCol>, <hBitmap>, <hPalette>, <nWidth>, <nHeight>, <nRaster>, <lTransparent>, <nClrPane> ) -> nil  
+PalBmpLoad( <cResName> ) -> aBmpPal  
+PalBmpRead( <hDC>, <cBmpFile> ) -> aBmpPal  
+PalBmpRealize( <hWnd>, <hPalette> ) -> nResult 
+PalBtnPaint( <hWnd>, <hBitmap1>, <hPalette1>, <hBitmap2>, <hPalette2>, <hBitmap3>, <hPalette3>, <lPressed>, <lAdjust>, <lBorder>, <lMenu>, <cMaskColor>, <cCaption>, <nLayout>, <hFont>, <nClrText>, <hDC> ) -> nil  
+ParamCount( nProcDeep ) -> nParams  
+pBmpColors( <hBmpPal> ) -> nColors  
+pBmpHeight( <hBmpPal> ) -> nHeight  
+pBmpWidth( <hBmpPal> ) -> nWidth  
+PeekByte( <nSegment>, <nOffset> ) -> nByte  
+PeekMessage( @<cMsg>, <hWnd>, <nFilterFirst>, <nFilterLast>, <nRemove> ) -> <lSuccess>  
+PeekWord( <nSegment>, <nOffset> ) -> nWord  
+Pie( <hDC>, <nLeftRect>, <nTopRect>, <nRightRect>, <nBottomRect>, <nxStartArc>, <nyStartArc>, <nxEndArc>, <nyEndArc> ) -> <lSuccess>  
+PlayEnhMetaFile( <hDC>, <hEMF>, <hWnd>, <nZoom> ) -> lSuccess 
+PlayMetafile( <hDC>, <hMetaFile> ) -> lSuccess  
+PokeByte( nSegment, nOffset, nByte ) -> nil  
+PokeWord( <nSegment>, <nOffset>, <nWord> ) -> nil  
+PolyPolygon( <hDC>, <aPolygon1>, ...<aPolygonN> ) -> <lSuccess>  
+PostMessage( <hWnd>, <nMsg>, <nWParam>, <nLParam> ) -> <lSuccess>  
+PostQuitMessage( <nExitCode> ) -> nil  
+PrintBegin( <cDoc>, <lUser>, <lPreview>, <xModel>, <lModal> ) -> oPrinter  
+PrintEnd( ) -> nil  
+PrinterEsc( <hDC>, <cText> ) -> lSuccess  
+PrinterIni( ) -> nil  
+PrinterSetup( <hWndOwner> ) -> nil  
+PrnBinSource( <nBin> ) -> nPrevBin  
+PrnDuplex( <nValue> ) -> nOldValue  
+PrnGetCopies( ) 
+PrnGetDriver( ) 
+PrnGetName( ) -> cPrinter  
+PrnGetOrientation( ) -> nOrientation  
+PrnGetPages( ) 
+PrnGetPort( ) -> cPort  
+PrnGetSize( <hDC> ) -> aPoint  
+PrnLandscape( <hDC> ) -> lSuccess  
+PrnOffset( <hDC> ) -> aPoint  
+PrnPortrait( ) -> lSuccess  
+PrnSetCollate( <lOnOff> ) -> lSuccess  
+PrnSetCopies( <nCopies> ) -> lSuccess  
+PrnSetSize( <nWidth>, <nHeight> ) 
+PropSheet( <hWnd> ) -> nResult 
+RaConSt( <hRas> ) -> nState  
+RaDial( <cEntry>, <cUser>, <cPass>, <hWnd> ) -> hRas  
+RaEnumConnections( ) -> aConections  
+RaEnumEntries( ) -> aEntries  
+RaGetConSt( <hRas>, <aStatus> ) 
+RaGetError( <nError>, <@cBuffer> ) 
+RaHangUp( <hRas> ) -> lSuccess  
+RasDialDlg( <cPhoneBook>, <cEntry>, <cPhoneNumber> ) -> nil  
+Ras_dialEntry( <cEntry>, <hWnd> , <hRas> ) -> nStatus  
+RddEvent( <cEvent>, <uParam1>, <uParam2>, <uParam3>, <uParam4>, <uParam5>, <uParam6>, <uParam7>, <uParam8>, <uParam9>, <uParam10>, <uParam11> ) -> uRet  
+ReadBitmap( [<hDC>], <cBmpFile> ) -> <hBitmap>  
+ReadComm( <nIdComm>, @<cBuffer> ) -> <nBytesRead>  
+ReadEvent( <pEventMsg>, <pDelay> ) -> nil  
+ReadVar( ) -> oGet  
+RealizePalette( <hDC> ) -> nEntries  
+Rectangle( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> [, <hPen>] ) -> <lSuccess>  
+RectDotted( <hWnd>, <nTop>, <nLeft>, <nBottom>, <nRight> ) 
+Recv( <nSocket>, <@cBuffer> ) -> nResult  
+RegCloseKey( <hKey> ) -> nResult  
+RegCreateKey( <nKey> , <cSubKey> , <@nHandle> ) -> nResult  
+RegDeleteKey( <hKey>, <cSubKey> ) -> nResult  
+RegEnumKey( <nKey> , <nSubKey>, <@cKey>  ) -> nResult  
+RegisterClass( <cClassName>, <nStyle>, <nClsExtra>, <nWndExtra>, <hCursor>, <hBrush>, <cMenuName>, <nWndProc> ) -> <lSuccess>  
+RegOpenKey( <nkey> , <cSubKey> , <@nHandle> ) -> nResult  
+RegQueryValue( <nKey> , <cSubKey> , <@cValue> ) -> nResult  
+RegSetValue( <nKey>  , <cSubKey> , <cValue> ) -> nResult  
+ReleaseCapture( ) -> nil  
+ReleaseDC( <hWnd>, <hDC> ) -> <lSuccess>  
+RemoveFont( <cFontName> ) -> <lSuccess>  
+RemoveMenu( <hMenu> , <nItem> , <nFlags> ) -> lSuccess  
+RemoveProp( <hWnd>, <cStringAtom> ) -> <lSuccess>  
+Report( [<oBrowse>] ) -> nil  
+ResetDC( <hDC> ) -> lSuccess  
+ResourceFree( <hResource> ) 
+RestoreDC( <nSavedDC> ) -> lSuccess  
+RestProc( <hWnd>, <nOldProc> ) -> nil  
+RLCheck( <hGlobalMem>, <nRecNo> ) -> lResult  
+RLNew( ) -> hGlobalMem  
+RLQuery( <cQuery> ) -> hGlobalMem  
+RLSet( <hGlobalMem>, <nRecNo> ) -> nil  
+RoundRect( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight>, <nEllipseWidth>, <nEllipseHeight> ) -> lSuccess  
+RPreview( <oDevice> ) -> nil  
+RptAddColumn( <aTitle> , <nCol> , <aData> , <nSize> , <aPicture> , <uFont> , <lTotal> , <bTotalExpr>, <cColFmt> , <lShadow> , <lGrid> , <nPen> ) -> oColumn  
+RptAddGroup( <bGroup> , <bHeader>, <bFooter>, <bFont> , <lEject> ) -> oGroup  
+RptBegin( <aTitle>, <aHead>, <aFoot>, <aFont>, <aPen>, <lSummary>, <cRptfile>, <cResName>, <lPrint>, <lScreen>, <cFile>, <oDevice>, <cName>, <cTFmt>, <cHFmt>, <cFFmt> )-> oReport  
+RptEnd( ) -> oReport  
+RTFToGTF( <cRTF> ) -> cGTF  
+SaveDC( <hDC> ) -> nSavedDev  
+Say3D( <hWnd>, <hDC>, <cCaption>, <lRaised>, <lCentered> ) -> nil  
+Scan( u, hFile [, cData ] ) -> nil  
+ScreenToClient( <hWnd>, <aPoint> ) -> nil  
+ScrollWindow( <hWnd>, <nCol>, <nRow>, <aRect>, <aClip> ) -> nil  
+ScrResolution( [<@nWidth>], [<@nHeight>] ) -> aResolution  
+SelectObject( <hDC>, <hGDIObject> ) -> <hPrevGDIObject>  
+SelectPalette( <hDC> , <hPalette> , <lBack> ) -> nPrevPal  
+SendBinary( <nSocket>n, <pMemory> ) -> nResult  
+SendMessage( <hWnd>, <nMsg>, <nWParam>, <nLParam> -> <nLResult>  
+ServerIP( ) -> cIpAddress  
+Set3DLook( <lOnOff> ) 
+SetAccTable( <aItems> ) -> hAccel 
+SetActiveWindow( <hWnd> ) -> <hPrevWnd>  
+SetBkColor( <hDC>, <nRGBColor> ) -> nPrevious  
+SetBkMode( <hDC>, <nMode> ) -> nPrevius  
+SetBlackPen( <hDC> ) -> <hPrevPen>  
+SetBrushOrg( <hDC>, <hBrush>, <nXOrg>, <nYOrg> ) 
+SetCapture( <hWnd> ) -> <hWndPrev>  
+SetCaretPos( <nCol>, <nRow> ) -> nil  
+SetClassWord( <hWnd>, <nIndex>, <nNewValue> ) -> <nOldValue>  
+SetClipboardData( <nType>, <cText> ) -> <nHandle>  
+SetClpData( <nFormat>, <uData> ) -> <lSuccess>  
+SetCommState( <cDCB> ) -> <lSuccess>  
+SetCurdrive( <cDrive> ) 
+SetCursor( <hCursor> ) -> <hOldCursor>  
+SetCursorPos( <nX>, <nY> ) -> nil  
+SetDate( <nDay>, <nMonth>, <nYear> ) -> <lSuccess>  
+SetDatePick( <hWnd>, <nYear>, <nMonth>, <nDay> ) -> nil 
+SetDeskWallPaper( <cBmpFile> ) -> <lSuccess>  
+SetDropInfo( uInfo ) -> nil  
+SetFClipData( <hWnd>, <cTxt>, <cGTF>, <cRTF> ) -> lSuccess 
+SetFocus( <hWnd> ) -> <hWndPrev>  
+SetForegroundWindow( <hWnd> ) -> lSuccess 
+SetFDate( <hFile>, <cTime>, <cdDate> ) -> <hWndPrev>  
+SetGridSize( <nWidth>, <nHeight> ) -> nil  
+SetHandleCount( <nHandles> ) -> <nHandlesAvailables>  
+SetHelpFile( cHelpFile ) 
+SetIdleAction( [ bIdleAction ] ) -> nil  
+SetLayeredWindowAttributes( <hWnd>, <nColorKey>, <nBlend>, <nAction> ) -> lSuccess 
+SetMapMode( <hDC>, <nMode> ) -> <nOldMode>  
+SetMenu( <hWnd>, <hMenu> ) -> lSuccess  
+SetMinMax( <pMinMaxInfo>, <aMinMaxInfo> ) -> 0  
+SetMultiple( <lOnOff> ) 
+SetParent( <hWndChild>, <hWndParent> ) -> <hWndOldParent>  
+SetPixel( <hDC>, <nCol>, <nRow>, <nRGBColor> ) -> <nRGBColor>  
+SetPolyFillMode( <hDC>, <nMode> ) -> nPrevMode  
+SetPrintDefault( <cModel> ) -> nil  
+SetProp( <hWnd>, <cProp>, <nData> ) -> <lSuccess>  
+SetResources( <cName> ) -> hLib  
+SetScrollInfo( <hWnd>, <nFlags>, <nPage>, <lRedraw> ) -> lSuccess 
+SetScrollPos( <hWnd>, <nFlags>, <nPos>, <lRedraw> ) -> nPrevPos 
+SetScrollRange( <hWnd>, <nFlags>, <nMin>, <nMax>, <lRedraw> ) -> nil 
+etSockOpt( <nSocket>, <nLevel>, <nOptName> ) -> lSuccess  
+SetTaskManager( <lOnOff> ) -> nil  
+SetTextAlign( <hDC>, <nAlignMode> ) -> <nOldAlign>  
+SetTextColor( <hDC>, <nClrText> ) -> nPrevColor  
+SetTextJustification( <hDC>, <nExtraSpace>, <nBreakChars> ) -> lOk  
+SetTime( <nHour>, <nMinutes>, [<nSeconds>], [<nMillSecs>] ) -> <lSuccess>  
+SetTimer( <hWnd>, <nIdTimer>, <nInterval> ) -> <nNewId>  
+SetViewOrg( <hDC>, <nLeft>, <nTop> ) -> aPrevOrigin  
+SetViewPortExt( <hDC>, <nWidth>, <nHeight> ) -> <aPrevDimensions>  
+SetWhitePen( <hDC> ) -> <hPrevPen>  
+SetWin95Look( <lOn/lOff> ) 
+SetWindowExt( <hDC>, <nUnitsWidth>, <nUnitsHeight> ) -> aPrevDimensions 
+SetWindowLong( <hWnd>, <nType>, <nValue> ) -> nOldValue 
+SetWindowOrg( <hDC>, <nXOrg>, <nYOrg> ) -> aPrevOrg 
+SetWindowPos( <hWnd>, <hWndInsertAfter>, <nRow>, <nCol>, <nWidth>, <nHeight>, <nFlags> ) -> lSuccess 
+SetWindowText( <hWnd>, <cText> ) -> nil  
+SetWindowWord( <hWnd>, <nType>, <nValue> ) -> nOldValue 
+SetWndDefault( <oWnd> ) -> nil  
+Sfn2Lfn( <cShortFileName> ) -> cLongFileName  
+ShellAbout( <cMsg> [, <cTitle>] [, <hIcon>] ) -> nil  
+ShellExecute( <hWnd>, <cOption>, <cFile>, <cParams>, <cDir>, <nCmdShow> ) -> nError  
+ShowCaret( <hWnd> ) 
+ShowCursor( <lOn/lOff> ) -> lNewState  
+ShowWindow( <hWnd>, <nMode> ) -> <lSuccess>  
+Sin( <nAngle> ) -> nSin  
+SndPlayRes( <cSndName>, <nMode> ) -> <lSuccess>  
+SndPlaySound( <cSndName>, <nMode> ) -> <lSuccess>  
+Socket( <nAf>, <nType>, <nProtocol> ) -> nSocket  
+SocketSelect( <nSocket> ) -> nNumReady  
+SocketSend( <nSocket>, <cText> ) -> nBytesSent  
+SpoolFile( <cPrinter>, <cPortName>, <cJobName>, <cFileName> ) -> hSpooler  
+SQLAllocConnect( <hEnv>, <@hDbc> ) -> nRetCode 
+SQLAllocEnv( <@hEnv> ) -> nRetCode 
+SQLAllocStmt( <hDbc>, <@hStmt> ) -> nRetCode 
+SQLCancel( <hStmt> ) -> nRetCode 
+SQLCol( <hStmt>, <cTableName>, <cColumnTable> ) -> nRetCode 
+SQLColumns( <hStmt>, <cTableName>, <cColumnTable> ) -> nRetCode 
+SQLCommit( <hEnv>, <hDbc> ) -> nRetCode 
+SQLConnect( <hDbc>, <cDsn>, <cUser>, <cPassword> ) -> nRetCode 
+SQLDesc32( <hStmt>, <nField>, <@cColName>, <@nType>, <@nLen>, <@nDec>, <@nNull> ) -> nRetCode 
+SQLDescribeCol( <hStmt>, <nField>, <@cColName>, <@nType>, <@nLen>, <@nDec>, <@lNull> ) -> nRetCode 
+SQLDisconnect( <hDbc> ) -> nRetCode 
+SQLDriverConnect( <hDbc>, <cConnectString> ) -> nRetCode 
+SQLDrvC32( <hDbc>, <hWnd>, <cConnectString>, <Reserved>, <@cBuffer>, <Reserved>, <@nLen>, <nDrvCompletion> ) -> nRetCode 
+SQLError( <hEnv>, <hDbc>, <hStmt>, <@cErrorClass>, <@nType>, <@cErrorMsg> ) -> nRetCode 
+SQLExecDirect( <hStmt>, <cStatement> ) -> nRetCode 
+SQLExecute( <hStmt> ) -> nRetCode 
+SQLExtendedFetch( <hStmt>, <nFetchType>, <nRow>, <@nRows>, <aRowStatus> ) -> nRetCode 
+SQLFetch( <hStmt> ) -> nRetCode 
+SQLFile( <hStmt>, <cTableName> ) -> nRetCode 
+SQLFreeConnect( <hDbc> ) -> nRetCode 
+SQLFreeEnv( <hEnv> ) -> nRetCode 
+SQLFreeStmt( <hStmt>, <nOption> ) -> nRetCode 
+SQLGetConnectOption( <hDbc>, <nOption>, <@cResult> ) -> nRetCode 
+SQLGetCurName( <hStmt>, <@cName> ) -> nRetCode 
+SQLGetCursorName( <hStmt>, <@cName> ) -> nRetCode 
+SQLGetD32( <hStmt>, <nField>, <nType>, <@cBuffer>, <nSize>, <@nLen> ) -> nRetCode 
+SQLGetData( <hStmt>, <nField>, <nType>, <nLen>, <cData>, <lIsNull> ) -> nRetCode 
+SQLGetDiagRec( <hStmt> ) -> cErrorMsg 
+SQLGetIn32( <hDbc>, <nType>, <@cResult> ) -> nRetCode 
+SQLGetInfo( <hDbc>, <nType>, <@cResult> ) -> nRetCode 
+SQLGetStmtOption( <hStmt>, <nOption>, <@cResult> ) -> nRetCode 
+SQLGetTextData( <hStmt>, <nField>, <@cBuffer>, <@nLen> ) -> nRetCode 
+SQLIndex( <hStmt>, <cTableName> ) -> nRetCode 
+SQLNumResultCols( <hStmt>, <@nCols> ) -> nRetCode 
+SQLParamData( <hStmt>, <pPtrData> ) -> nRetCode 
+SQLPrep32( <hStmt>, <cCommand> ) -> nRetCode 
+SQLPrepare( <hStmt>, <cCommand> ) -> nRetCode 
+SQLPrimaryKeys( <hStmt>, <cTableName> ) -> nRetCode 
+SQLPutData( <hStmt>, <pData>, <nLen> ) -> nRetCode 
+SQLRollBack( <hEnv>, <hDbc> ) -> nRetCode 
+SQLRowCount( <hStmt>, <@nRow> ) -> nRetCode 
+SQLColumns( <hStmt>, <nOption1>, <cTableName>, <nOption2>, <nOption3> ) -> nRetCode 
+SQLSetConnectOption( <hDbc>, <nOption>, <cnData> ) -> nRetCode 
+SQLSetCurName( <hStmt>, <cName> ) -> nRetCode 
+SQLSetCursorName( <hStmt>, <cName> ) -> nRetCode 
+SQLSetParam( <hStmt>, <nParamOrder>, <nCType>, <nSQLType>, <nPrecision>, <nScale>, <ptrData>, <@nLen> ) -> nRetCode 
+SQLSetPos( <hStmt>, <nRecNo>, <nOption>, <nLock> ) -> nRetCode 
+SQLSetStmt( <hStmt>, <nOption>, <cnData> ) -> nRetCode 
+SQLStatistics( <hStmt>, <cTableName> ) -> nRetCode 
+SQLTables( <hStmt>, <cTableName> ) -> nRetCode 
+SQLTransact( <hEnv>, <hDbc>, <nFlags> ) -> nRetCode 
+StartDoc( <hDC>, [<cDocName>], [<cOutput>] ) -> nPrintJob  
+StartMonitor( ) 
+StartPage( <hDC> ) -> <nRetCode>  
+StartPlayback( ) 
+StartRecord( ) 
+SToD( <cDate> ) -> dDate 
+StopPlayBack( ) 
+StopRecord( ) 
+StopUntil( <bBlock> ) -> nil  
+Str2Hex( <cString> ) -> cHex 
+StrByte( <cStr>, <nBytePos>, [ <nValue> ] ) -> nValue  
+StrCapFirst( <cString> ) -> cstring  
+StrChar( <cString>, <nChar> ) -> cChar  
+StrCharCount( <cString>, <cChar> ) -> nTimes 
+StrCpy( <cSource>, <cTarget> ) -> cTarget  
+StrPtr( <cString> ) -> nAddress 
+StrToken( <cText>, <nOcurrence> [, <cSepChar>] ) -> <cToken>  
+SymName( <hSymbol> ) -> cSymName  
+SymStat( <hSymbol> ) -> lStatic  
+SymTblAt( <nSymIndex> ) -> hSymbol  
+SymTblLen( ) -> nLen  
+SysRefresh( ) -> <lQuit>  
+SysTime( <nNewTime> ) -> nil  
+SysWait( <nLong> ) -> nil  
+TabCtrlAdd( <cPrompt> ) -> nil  
+TabCtrl_AdjustRect( <hWnd> ) -> aRect  
+TabCtrl_GetCurSel( <hWnd> ) -> nItem  
+TabCtrl_HitTest( <hWnd> ) -> nItem  
+TabCtrl_SetCurSel( <hWnd>, <nItem> ) -> nPrevItem  
+TabDelAllItems( <hWnd> ) -> nil  
+TabsPaint( <hWnd>, <hDC>, <aPrompts>, <aSizes>, <hFont1>, <hFont2>, <nClrPane>, <nOption> ) -> nil  
+Tang( <nAngle> ) -> nTang  
+TaskAddIcon( <oWnd>, <oIcon>, <cToolTip> ) -> oNotifyIconData 
+TaskChangeIcon( <oNotifyIconData>, <oIcon> ) -> oNotifyIconData 
+TaskDelIcon( <oNotifyIconData> ) -> nil 
+TCBrwScrol( <hWnd>, <nRows>, <hFont> ) -> nil  
+TcDrawCell( <hWnd>, <hDC>, <nRow>, <nColumn> , <nWidth> , <uData>, <nAlign> , <nClrFore>, <nClrBack> , <hFont>, <nBitmap>, <dwRaster>, <nLinesStyle> ) 
+TerminateApp( <hTask>, <nMode> ) -> nil  
+TextOut( <hDC>, <nRow>, <nCol>, <cText> ) -> <lSuccess>  
+ThisStruct( <oStruct> ) -> oStruct  
+Time( ) -> cTime  
+TimeFromStart( ) -> cTime  
+TimerCount( ) -> <aTimerInfo>  
+TimerEvent( <nId> ) -> 0  
+aMidiDevices( ) -> acMidiDevices  
+CurDrive( ) -> <cCurDrive>  
+Cursor( <cnCursor> ) -> lSuccess  
+CursorArrow( ) -> nil  
+CursorCatch( ) -> nil  
+CursorHand( ) -> nil  
+CursorIbeam( ) -> nil  
+CursorNS( ) -> nPrevCur  
+CursorSize( ) -> nil  
+CursorWait( ) -> nil  
+AnsiLower( <cString>) -> cLowerString  
+CursorWE( ) -> nil  
+cValToChar( <uValue> ) -> <cValue>  
+D2bin( <nFloat> ) -> cValue  
+DbClearInd( ) -> nil  
+DbCloseAre( ) -> nil  
+DbCommitAl( ) -> nil  
+DbCopyStru( <x>, <y> ) -> nil  
+DbCreateIn( <x>, <y>, <z>, <w> ) -> nil  
+DbfCdx( ) -> nil  
+DbfCdxAx( ) -> nil  
+DbfNtx( ) -> nil  
+DbPack( ) -> nil  
+DbPx( ) -> nil  
+DbRLockList( ) -> aRecordLocks  
+DbSelectArea( <x> ) -> nil  
+DbSetDefa( <x> ) -> nil  
+DbSetRelat( <x>, <y>, <z> ) -> nil  
+DbZap( ) -> nil  
+AnsiUpper( <cString>) -> cUpperString  
+DDEAck( <hWndServer>, <nExtraData> ) -> nil  
+DDEclientt( <hData>, <nLen>, <hConv>, <hszItem>, <nClipFmt>,   <nType>, <nTimeOut>, <@nResult>)-> hDDEData  
+DDEcmpstri( <hSZ1>, <hSZ2> ) -> nResult  
+DDECommand( <cDDECommand> ) -> <pGlobalMemory>  
+DDEconnect( <hInst>, <hService>, <hTopic>, <pCC> ) -> hConv  
+DDEDisconnect( <hConv> ) -> lSuccess  
+DDEFreedataHandle( <hData> ) -> lSuccess  
+DDEFreeStringHandle( <hInst>, <hText> ) -> lSuccess  
+DDEGetCommand( <pGlobalMemory> ) -> <cDDECommand>  
+aOData( <oObject> ) -> <aClassDataNames>  
+DDEGetData( <hData>, <nOffset> ) -> cData  
+DDEinitialize( <@hInst> , <pDDEProc>, <nType> ) -> nResult  
+DDENameService( <hInst>, <hText>, <nReserved>, <nFlags> ) -> hDDEData  
+DDEQuerySting( <hInst>, <hSZ> ) -> cString  
+DDETerminate( <hWndServer> ) -> nil  
+DDEUninitialize( <hInst> ) -> lResult  
+Decrypt( <cEncryptedText> [, <cKey> ] ) -> <cDecryptedText>  
+DefWindowProc( <hWnd>, <nMsg> , <nParam, <nlParam>) -> <nResult>  
+DelDbfMdx( <cDbfFileName> ) -> <lSuccess>  
+AppendMenu( <hMenu>, <nFlags>, <nFlags>, <cPrompt> ) -> lSucces  
+DeleteDC( <hDC> ) -> <lSuccess>  
+DeleteMetafile( <hMeta> ) -> lSuccess  
+DeleteObject( <hGDIObject> ) -> <lSuccess>  
+DelIniEntry( <Section>, <Entry> , <File> ) -> lSuccess  
+DelIniSection( <cSection>, <cFile> ) -> lSuccess  
+DelResource( <hResource> ) -> lSuccess  
+DelWndBrus( ) 
+DestroyCursor( <hCursor> ) -> <lSuccess>  
+DestroyIcon( <hIcon> ) -> lSuccess  
+DestroyMenu( <hMenu> ) -> lSuccess  
+Arc( <hDC>, <nLeftRect>, <nTopRect>, <nRightRect>, <nBottomRect>, <nXStartArc>, <nYStartArc>, <nXEndArc>, <nYEndArc> ) -> <lSuccess>  
+DestroyWindow( <hWnd> ) -> <lSuccess>  
+DeviceCapabilities( <cDevice>, , <nCapability>, <@cBuffer> ) -> <nRetCode>  
+DevMode( <cDeviceName>, <nSpecVersion> ) -> aDevMode  
+DialogBoxIndirect( <hInstance>, <cMemTemplate>, <hWndOwner> )-> <nResult>  
+DibDraw( <hDC>, <hMemBitmap>, <hPalette>, <nRow>, <nCol>, <nWidth>, <nHeight>, <nRasterOp> ) -> lSuccess  
+DibFromBitmap( <hBitmap>, <hPalette> ) -> <hDIB>  
+DibHeight( <hDib> ) -> <nHeight>  
+DibPalette( <hDIB> ) -> <hPalette>  
+DibRead( <cBitmapFile> ) -> <hDIB>  
+DibWidth( <hDib> ) -> <nWidth>  
+DibWrite( <cBMPFileName>, <hDIB> ) -> <lSuccess>  
+DitBackGrd( <hWnd> , <hDC> , <nRed> , <nGreen>, <nBlue> ) 
+DlgFindText( <cText>, <oEdit> ) -> oDlg  
+DotsAdjust( <hWndParent>, <hDot1>, <hDot2>, <hDot3>, <hDot4>, <hDot5>, <hDot6>, <hDot7>, <hDot8> ) -> nil  
+DPToLP( <hDC>, <aPoint> ) -> <lSuccess>  
+DraftMode( <lDraft> ) 
+DragAccept( <hWnd>, <lOnOff> ) 
+DragFinish( <hDrop> ) 
+DragQueryPoint( <hDrop>, <aPoint> ) -> lInClient  
+DrawBitmap( <hDC>, <hBitmap>, <nRow>, <nCol>, <nWidth>, <nHeight>, <nRaster> ) -> nil  
+Arg( <nCmdLineOrder> ) -> cExeCommandLineParam  
+DrawFocusRect( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) 
+DrawGrayed( <hDC>, <hBitmap>, <nRow>, <nCol> ) -> nil  
+DrawGrid( <hWnd>, <hDC>, <@cPS>, <wGridX>, <wGridY> ) -> nil  
+DrawIcon( <hDC>, <nRow>, <nCol>, <hIcon> ) -> <lSuccess>  
+DrawMasked( <hDC>, <hBitmap>, <nRow>, <nCol>  ) -> nil  
+DrawMenuBar( <hMenu> ) -> nil  
+DrawMsgItem( <hDC>, <cMsg>, <aCoor>, <nClrText>, <nClrPane>, <hFont> ) -> nil  
+DrawText( <hDC>, <cText>, <aRect>, <nStyle> ) -> <nTextHeight>  
+DupRecord( ) -> nil  
+EditCell( <oLbx>, <nRowPix>, <nColPix> ) 
+Ellipse( <hDC>, <nLeft>, <nTop>, <nRight>, <nBottom> ) -> <lSuccess>  
+EmptyClipboard( ) -> <lSuccess>  
+EnableCommNotification( <nComDev>, <hWnd>, <nInBytes>, <nOutBytes> ) -> lSucces  
+EnableMenuItem( <hMenu>, <nIdItem>, <nFlags> ) -> lSuccess  
+EnableWindow( <hWnd>, <lEnable> ) -> <lSuccess>  
+Encrypt( <cText> [, <cKey> ] ) -> <cEncryptedText>  
+EndDialog( <hWndDlg>, <nResult> ) -> nil  
+EndDoc( <hDC> ) -> nSuccess  
+EndMonitor( ) -> nil  
+EndPage( <hDC> ) -> <nReturnCode>  
+EndPaint( <hWnd>, <cPS> ) -> nil  
+EnumFontFamilies( <hDC>, <cFamily>, <bCallBack> ) -> uVal  
+Escape( <hDC>, <nEscape>, <cInput>, <@cOutPut> ) -> nReturn  
+EscapeComm( <nComDev>, <nFunctionCode> ) -> lSuccess  
+ExitWindowsExec( <cExeName>, <cParams> ) -> <lSuccess>  
+ExitWnd( <nRetCode> ) -> lSuccess  
+ExtFloodFill( <hDC>, <nCol>, <nRow>, <nRGBColor>, <nType> ) -> lSuccess  
+ExtractIcon( <cExeName>, <nIndex>) -> <hIcon>  
+ExtTextOut( <hDC>, <nRow>, <nCol>, <aRect>, <cText>, <nStyle> ) -> <lSucess>  
+aTCBrwPosRec( <hWnd>, <nRow>, <nCol>, <nWidth>, <hFont> ) -> aCoors  
+FAttrib( <cFileName> [, <nNewAttrs>] ) -> nAttrs  
+fMimeEnc( <nIn>, <nOut> ) -> nil  
+fMimeEnc( <nIn>, <nOut> ) -> nil  
+*Field( <n> ) -> cFieldName  
+FieldType( < n > ) -> cType  
+DbCopyStru( <cFieldName>, <nWorkArea> ) -> bBlock  
+FillEvent( <&ampevent>, <&ampdelay>, <message>, <paramL>, <paramH>, <time> ) -> nil  
+FillRect( <hDC>, <aRect>, <hBrush> ) -> nil  
+FindExecutable( <cFile>, <cDir>, <@cResult> ) 
+FindResource( <hResources>, <cResourceName>, <nResType> ) -> hResInfo  
+aTreeBmps( )-> <aBmpHandles>  
+FindText( <cText>, <hWnd>, <oWnd>, <@nFindMsgString> ) -> hWnd  
+FindWindow( <cClassName>, <cTitle> ) -> hWnd  
+FlushComm( <nIdComDev>, <nQueue> ) -> <nReturn>  
+fMimeDec( <cIn>, <cOut> ) -> nil  
+fMimeEnc( <cIn>, <cOut> ) -> nil 
+FreeLib32( <hInstance> ) -> lSuccess  
+FreeLibrary( <hInstance> ) -> nil  
+FSize( <cFileName> ) -> <nFileSize>  
+AuxGetCaps( <idDevice>, <@aDev> ) -> nSuccess  
+FWBitmap( <hDC> ) -> <hBitmap>  
+FWBrushes( <nBrushId> ) -> <hBitmap>  
+GetActiveWindow( ) -> <hWnd>  
+GetASyncKey( <nKey> ) -> <lDown>  
+GetBkColor( <hDC> ) -> nBgClr  
+GetCapture( ) -> <hWnd>  
+GetCaretPos( ) -> <aPoint>  
+GetClassName( <hWnd> ) -> <cClassName>  
+GetClientRect( <hWnd> ) -> <aRect>  
+GetClpData( <nFormat> ) -> <cData>  
+AuxGetDev( ) -> nDevices  
+GetCommError( <nIdComDev>, @<cComStat> ) -> <nRetCode>  
+GetCoors( <hWnd> ) -> <aCoors>  
+GetCPU( ) -> cCPUType  
+GetCtrlId( <hCtrl> ) -> nId  
+GetCurDir( ) -> cCurDir  
+GetCursorPos( ) -> aPoint  
+GetDatas( <oBject> ) -> aDatas  
+GetDC( <hWnd> ) -> <hDC>  
+GetDesktopWindow( ) -> <hWndDesktop>  
+GetDeviceCaps( <hDC>, <nCapability> ) -> <nValue>  
+AuxGetVol( <nIdDevice>, <nVolLeft>, <nVolRight> ) -> nSuccess  
+GetDialogBaseUnits( ) -> <aBaseUnits>  
+GetDlgBase( ) --> > nBaseUnits  
+GetDlgItem( <hDlg>, <nCtlId> ) -> <hControl>  
+GetDrawItem( <pDrawItemStruct> ) -> nMenuItemID  
+GetDrawMenu( <pDrawItemStruct> ) -> hMenu  
+GetDropInfo( ) -> uDropInfo  
+GetFirstInZip( <cZipFileName> ) -> <aFileInfo>  
+GetFocus( ) -> <hWnd>  
+GetFontInfo( <hFont> ) -> <aFontInfo>  
+GetFrameProc( )-> uVal  
+AuxSetVol( <nIdDevice>, <nVolLeft>, <nVolRight> ) -> nSuccess  
+GetFreeFileHandles( ) -> nFileHandles  
+GetFreeSpace( ) -> <nSize>  
+GetFDate( <hFile> ) -> <aDateTime>  
+GetGridSize( ) -> aSize  
+GetHelpFile( ) -> cHelpFile  
+GetHelpTopic( ) -> cHelpTopic  
+GetHostByName( <cHostName> ) -> cIPAddress  
+GetHostName( ) -> cHostName  
+GethWnd32( <hWnd16> ) -> hWnd32  
+GetInstance( ) -> <hInstance>  
+GetIP( <nSocket> ) -> cIPAddress  
+GetKeyStat( <nKey> ) -> <lPressed>  
+GetKeyToggle( <nKey> ) -> lState  
+GetLocal( <nStackLevel>, <nIndex> ) -> <uLocal>  
+GetMapMode( <hDC> ) -> <nMapMode>  
+GetMDIChlP( ) -> nlPointer  
+GetMeaItem( <pMeasureItemStruct> ) -> ItemId  
+GetMenuState( <hMenu>, <nId>, <nFlags> ) -> nState  
+GetMetaBit( <hDC> ) -> hMetaFile  
+GetMetaFile( <cFileName> ) -> hMetafile  
+GetMItemId( <hMenu>, <nPos> ) -> nItemId  
+GetModuleFileName( <hInstance> ) 
+GetNextInZip( ) -> <aFileInfo>  
+GetNumTask( ) -> nTasksInUse  
+GetOrdNames( ) -> aTagNames  
+GetParam( <nStackLevel>, <nIndex> ) -> <uParameter>  
+GetParent( <hWnd> ) -> <hWndParent>  
+GetPeerName( <nSocket> ) ->   
+GetPixel( <hDC>, <nCol>, <nRow> ) -> <nRGBColor>  
+BarInvert( <hWnd> ) -> nil  
+GetPort( <nSocket> ) -> nPort  
+GetPrinter( ) -> <hDC>  
+GetProc32( <hInst>, <cProcName>, <lPascalType>, <nReturnType>, [<nParam1Type>, ...<nParamNType>] ) -> <cProcData>  
+GetProcAddress( <hInst>, <cProcName>, <lPascalType>, <nReturnType>, [<nParam1Type>, ...<nParamNType>] ) -> <cProcData>  
+GetProfStr( <cSection>, <cEntry>, <cDefault> ) -> <cValue>  
+GetProp( <hWnd>, <cPropIdentifier> ) -> <hData>  
+GetQuery( <cData> ) -> cQuery  
+GetResources( ) -> hResources  
+BarPaint( <hWnd>, <hDC> ) -> nil  
+GetServByName( <cServerName> ) -> nPort  
+GetStockObject( <nObjectType> ) -> <hGDIObject>  
+GetSubMenu( <hMenu>, <nPos> ) -> hMenu  
+GetSysColor( <nType> ) -> nColorType  
+GetSysDir( ) -> <cWinSystemPath>  
+GetSysMetrics( <nIndex> ) -> nValue  
+GetSystemMenu( <hWnd>, <lValue> ) -> hSysMenu  
+GetTasks( ) -> aTasks  
+GetTextAlign( <hDC> ) -> nFlags  
+BeginPaint( <hWnd>, @<cPS> ) -> <hDC>  
+GetTextColor( <hDC> ) -> nRGBColor  
+GetTextWidth( <hDC>, <cString>, [<hFont>] ) -> <nPixelWidth>  
+GetTickCount( ) -> nLongMillisecns  
+GetVersion( ) -> <anVersions>  
+GetWinDir( ) -> <cWinPath>  
+GetWindowWord( <hWnd>, <nIndex> ) -> <nValue>  
+GetWinFlags( ) -> nFlags  
+GetWinTxtLength( b<hMultiGet> ) -> nLen  
+GetWndApp( ) -> <hWnd>  
+Bin2d( <cValue> ) -> nValue  
+GetWndFrame( ) -> <oWndFrame>  
+GetWndRect( <hWnd> ) --< <aRect>     Parameters:   <hWnd> The handle of the window whose rect area is to be retrieved.     Returns:   <aRect> An array with the { nTop, nLeft, nBottom, nRight }     Source Code:      SOURCE-> WINAPI-> Rects.c  
+GetWndTask( <hWnd> ) -> <hTask>  
+GlobalAddAtom( <cString> ) -> <nAtom>  
+GlobalAlloc( <nType>, <nSize> ) -> hMem  
+GlobalCompact( <nMinFree> ) -> nFreeB  
+GlobalData( <hMem>, <cData> ) -> nil  
+GlobalFree( <hGlobalMem> -> <hGlobalMem>  
+GlobalGetAtomName( <hAtom> ) -> cAtom  
+GlobalLock( <hMem> ) -> hFixMem  
+BindToPort( <nSocket>, <nPort> ) -> lSuccess  
+GlobalRealloc( <hMem>, <nNewSize>, <nType> ) -> hMem  
+GlobalSize( <hMem> ) -> nSize  
+GlobalUnlock( <hMem> ) -> lSuccess  
+HasResources( <cExeName> ) -> lHasResources  
+HelpSearch( [ cString ] ) 
+HelpSetTopic( cTopic ) 
+BitBlt( <hdcDest>, <nCol>, <nRow>, <nWidth>, <nHeight>, <hdcOrg>, <nColOrg>, <nRowOrg>, <dwRop> ) -> lResult  
+HexToDec( <cHexNumber> ) -> nDecNumber  
+HideCaret( <hWnd> ) -> nil  
+HiliteMenuItem( <hWnd> , <hMenu> , <idItem>, <nHiliteFlags> ) -> lSuccess  
+Htons( <nAddress> ) -> nAddress  
+I2Hex( <nWord> ) -> <cHex>  
+Inet_address( <cIPAddress> ) -> nAddress  
+InportByte( <nPort> ) -> <nByte>  
+InportWord( <nPort> ) -> <nWord>  
+InsertMenu( <hMenu> , <nIdItem>n , <nFlags>n , <nNewItem>n, <cPrompt>n ) -> lSuccess  
+InterruptUnRegister( ) -> <lSuccess>  
+BringWindo( < hWnd > ) -> lResult  
+InvalidateRect( <hWnd>, <lRepaint> ) -> nil  
+InvertRect( <hDC>, <aRect> ) -> nil  
+IsAnsi( <cString> ) -> lAnsi  
+IsAnsiLower( <cAnsiStr> ) -> lAnsi  
+IsAnsiUpper( <cAnsiStr> ) -> lAnsi  
+IsCdRom( [ <cDrive> ] ) -> <lSuccess>  
+IsChild( <hWndParent>, <hWndCHild> ) -> lSuccess  
+IsDefButton( <hWnd> ) -> lDefault  
+IsDiskette( [ <cDrive> ] ) -> <lSuccess>  
+IsIconic( <hWnd> ) -> <lIconic>  
+IsMenu( <hMenu> ) -> lMenu  
+IsOEM( <cString> ) -> lOEM  
+IsOverWnd( <hWnd>, <nRow>, <nCol> ) -> lIsOver )  
+IsWin95( ) -> lWin95  
+IsWindowVisible( <hWnd> ) -> <lVisible>  
+IsWinNT( ) -> lWinNT  
+IsZip( <cZipFileName> ) -> <lYesNo>  
+IsZoomed( <hWnd> ) -> <lMaximized>  
+JoyGetDevCaps( <nIDDevice>, <aDevCaps> ) -> nError  
+BtnDisable( <hWnd>, <hDC> ) 
+JoyGetNumDevs( ) -> nNumDevs  
+JoyGetPos( <nIdJoy>, <aStatus> ) -> nError  
+JoyGetThreshold( <nIdJoy)> , <nThresHold> ) -> nError  
+JoyReleaseCapture( <nIdJoy> ) -> nError  
+JoySetThre( <nIdJoy>, <nTreshold> ) -> nError  
+KeyFast( ) -> nil  
+KeyToggle( <nKey> ) -> nil  
+KillTimer( <hWnd>, <nIdTimer> ) -> <lSuccess>  
+BtnPaint( <hWnd>, <hDib1>, <hPalette1>, <hDib2>, <hPalette2>, <lPressed>, <lAdjust> ) -> nil  
+lAnd( <nValue1>, <nValue2> ) -> <lResult>  
+LastMenu( ) -> oMenu  
+LbxDrawItem( <lp> , <aBitmaps> , <aItems> , <nBmpWidth> , <bDrawItem> ) -> .t.  
+LbxGetItem( <hWnd>, <nItem> ) -> <cText>  
+LbxGetSelItems( <hWnd> ) -> anItems  
+LbxMeasure( <nPInfo>, <nBmpHeight> ) -> .t.  
+lChDir( <cNewDir> ) -> <lSuccess>  
+lClose( <hFile> ) -> nError  
+lCreat( <cFileName>, <nMode> ) -> hFile  
+Lfn2Sfn( <cLongFileName> ) -> cshortFileName  
+lGetTextLine( <hFile>, <@cLine>, <nMaxLineLength> ) -> lRead  
+LineTo( <hDC>, <nRow>, <nCol>, <hPen> ) -> <lSuccess>  
+lIsDir( <cDir> ) -> <lSuccess>  
+Listen( <nSocket>, <nBackLog> ) -> nResult  
+lLFNMkDir( <cDirName> ) -> lSuccess  
+lLFNRmDir( <cDirName> ) -> lSuccess  
+lMidiExist( ) -> lExist  
+lMidiOutOpen( <@nMidi>, <[nDevice]> ) -> lOk  
+lMkDir( <cNewDir> ) -> <lSuccess>  
+Accept( <nSocket> ) -> nResult  
+LoadBitmap( <hInst>, <cnBitmap> ) -> <hBitmap>  
+LoadCursor( <hInst>, <cnCursor> ) -> <hCursor>  
+LoadIcon( <hInst>, <cnIcon> ) -> <hIcon>  
+LoadLib32( <cLibName> ) -> hLib  
+LoadLibrary( <cLibraryName> ) -> <hInstance>  
+LoadMenu( <hInst>, <cName> ) -> hMenu  
+LoadResoure( <hResource>, <hFindResource> ) 
+LoadString( <hInst>, <nResId> ) -> <cString>  
+LoadValue( <nId>, <cType> [, <uValue> ] ) 
+C2Hex( <cChar> ) -> <cHex>  
+LocalShrink( <hHeap>, <nNewSize> ) -> nSize  
+LogEvent( <nMessage>, <nParamL>, <nParamH>, <nTime> ) -> nil  
+LogFile( <cFileName>, <aInfo> ) 
+LogStatics( ) -> nil  
+lOpen( <cFileName>, <nMode> ) -> hFile  
+LPToDP( <hDC>, <aPoint> ) -> <lSuccess>  
+lRMDir( <cDirName> ) -> lSuccess  
+lSaveObject( <oVar>, <cFile> [, <nOpenMode>] ) -> nil  
+lWRunning( ) -> <lRunning>  
+lXor( <nOp1>, <nOp2> ) -> lResult  
+CallDll( <cFuntionDef>, <uParam1, ...> ) -> <uResult>  
+DbClearRel( ) -> nil  
+DbSetDrive( <x> ) -> cControladorActual  
+DbUnlockAl( ) -> nil  
+DDEAccessData( <pData>, <@nLen> ) -> pBuffer  
+CallDll32( <cFuntionDef>, <uParam1>, ... ) -> uResult  
+CallWindowProc( <nWndProc>, <hWnd>, <nMsg>, <nWParam>, <nLParam> ) -> <uReturn>  
+cArgV( <nOrder> ) -> <cCommandLineParam>  
+cChr2Data( <cstring> ) -> cString  
+cCtrl2Chr( <nTop>, <nLeft>, <nBottom>, <nRight>, <nId>, <nStyle>, <cClassName>, <cCaption> ) -> <cControlString>  
+cDlg2Chr( <nLenaControls>, <nTop>, <nLeft>, <nHeight>, <nWidth>, <cCaption>, <nStyle> ) -> cResult  
+( <cFileName> ) -> <cDrive>  
+AddFontResource( <cFontFile> | <hFontResource> ) -> <nFontsAdded>  
+cFileExt( <cFileName> ) -> <cExtName>  
+cFileMask( <cFileName> ) -> <cMask>  
+cFileName( <cFullFileName> ) -> <cFileName>  
+cFileNoExt( <cFileName> ) -> <cFileName>  
+cFileNoPath( <cFullFileName> ) -> <cFileName>  
+cFilePath( <cFileName> ) -> <cPath>  
+cFileSubDir( <cFileName> ) -> <cDirName>  
+cFreadLine( <nHandle> ) -> cLine  
+cGetDir( <cTitle>, [<cInitDir>], <nClsId>, <cTitle2>, <nFlags> ) -> cDir  
+cGetExpression( <cInitialExpression>, <cTitle> ) -> <cExpression>  
+cGetFile( <cFileMask>, <cTitle>, [<nDefaultMask>], [<cInitialDirectory>], [<lSave>], [<lLongNames>], [<nFlags>], [<cInitialFile>] ) -> <cFileName>  
+cGetNewAlias( <cAlias> ) -> cNewAlias  
+ChangeProc( <hWnd> ) -> <nOldProc>  
+CheckMenui( <hMenu> , <nItemId>, <nFlags> ) -> nLastState  
+ChildWindo( <hWnd>, <aPoint> ) -> hChildWnd  
+ChooseColor( <nRGBDefaultColor>, <nFlags> ) -> <nRGBColor>  
+Chord( <hDC>, <nLeftRect>, <nTopRect>, <nRightRect>, <nBottomRect>, <nXStartLine>, <nYStartLine>, <nXEndLine>, <nYEndLine> ) -> <lSuccess>  
+ClassCreat( x, y, z, w ) -> object  
+ClientIp( ) -> cIpAddress  
+aFindFile( <cFileName>, <cPath>, aResult> ) -> aResult  
+ClientToScreen( <hWnd>, <aPoint>) -> nil  
+CloseClipboard( ) -> <lSuccess>  
+CloseComm( <nDeviceId> ) -> <lSuccess>  
+CloseMetaf( <hDC> ) -> hMetafile  
+CloseSocket( <nSocket> ) -> nResult  
+CloseWindow( <hWnd> ) 
+CloseZipFile( ) -> nil  
+cMdiStruct( <cClass> , <cTitle> , <nTop> , <nLeft> , <nBottom>, <nRight> , <nStyle> ) -> MdiStruct  
+MsgList( <aData>, [<cTitle>], [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<cBtnText>]) -> nil     Parameters:   <aData> Array to show      <cTitle> Title of the container dialog box      <nTop> Superior coordinate of the dialogue box in characters      <nLeft> Left coordinate of the dialogue box in characters      <nBottom> Inferior coordinate of the dialogue box in characters      <nRight> Right coordinate of the dialogue box in characters      <cBntText> Text for the close button     Returns:   NIL     Source Code:      -> SOURCE\FUNCTION\MSGLIST.PRG 
+ColorsQty( ) -> nColors  
+LargeFonts( ) -> logical  
+cGetFile32( <cFileMask>, <cTitle>, [<nDefaultMask>], [<cInitialDirectory>], [lSave], [nFlags], [cInitialFile] ) -> <cFileName>  
+cGetDir32( <cTitle>, [<cInitDir>]) -> cDir  
+nGetFilter32( ) -> <nFilter>  
+PrnSetPage( <nPaperSize> ) 
+GetCPUSpeed( ) 
+cMimeDec( <cIn> ) -> cOut 
+Alert( [cMsg], [aLegends], [cTitle], [nDefault], [cIcon] )     Parameters:  <cMsg> Message to show in the dialog box   <aLegends> String array with the buttons legend   <cTitle> Dialog title   <nDefault> Default button   <xIcon> Icon File name or Icon resource name or Icon identifier     Returns:  <nButton> Pushed button.     Observations:    The new Alert functions implements automatically scroll bars if the size of the message is large and also lets you perform cut &amp paste operations to the dialog message.   Icon identifiers:      #define IDI_APPLICATION  32512   #define IDI_HAND   32513   #define IDI_QUESTION  32514   #define IDI_EXCLAMATION  32515   #define IDI_ASTERISK  32516  Source Code:    SOURCE\FUNCTION-> Alert.prg  
+GetSysFont( ) -> <cWindowsFontFacename>  
+cWinVersion( ) -> <cValue>  
+IsWin2000( ) -> lWin2000  
+OWndFromhWnd( <hWnd> ) -> <oWnd>  
+cMimeEnc( <cIn> ) -> cOut  
+aGetWorkAreas( ) -> <aWorkAreas>  
+cNewFileName( <cRootName>, <cExt> ) -> <cNewFileName>  
+cNtxKey( <cNtxFileName> ) -> <cIndexKey>  
+CPUType( ) -> nCPUType  
+CreateCaret( <hWnd> , <hBitmap>, <nWidth> , <nHeight> ) 
+CreateCDC( <hDC> ) -> hDCC  
+CreateDC( <cDriver>, <cDevice>, <cOutPut>, <cInitData> ) -> <hDC>  
+CreateDlgIndirect( <hInstance>, <cMemTemplate>, <hWndOwner> ) -> <hDlg>  
+CreateHatch( <nStyle>, <nRGBColor> ) -> <hBrush>  
+CreateMenu( ) -> hMenu  
+Alltrim( <cString> ) -> cNewString  
+CreateOLEObject( <cOleName> ) -> oBject  
+CreatePattern( <hBitmap> ) -> <hBrush>  
+CreatePen( <nStyle>, <nWidth>, <nRGBColor> ) -> <hPen>  
+CreatePopUpMenu( ) -> hMenu  
+CreateSolidBrush( <nRGBColor> ) -> <hBrush>  
+CreateWindow( <cClassName>, <cTitle>, <nStyle>, <nLeft>, <nTop>, <nWidth>, <nHeight>, <hWndOwner>, <hMenu>, <cExtraData> ) -> <hWnd>  
+cResToStr( <cResName>, <cResType> ) -> cInfo  
+cStrWord( <cString> , <@nOffset> , <cSeparator> ) -> cWord  
+cTempFile( ) -> <cNewFileName>  
+Ctl3dLook( <hWnd> ) -> lSuccess  
+TrackPopUpMenu( <hMenu>, <nFlags>, <nLeft>, <nTop>, <nReserved>, <hWnd> ) -> lSuccess  
+TreeBegin( <cBmpOpen>, <cBmpClose> ) -> <oTree>  
+TreeEnd( ) -> nil  
+TvDelAllItems( <hWnd> ) -> lSuccess  
+TvDeleteItem( <hWnd>, <hItem> ) -> lSuccess  
+TvGetSelected( <hWnd> ) -> hItem  
+TvGetSelText( <hWnd> ) -> cText  
+TvHitTest( <hWnd>, <nRow>, <nCol> ) -> hItem  
+TvInsertItem( <hWnd>, <cItemText>, <hItem>, <nImage> ) -> hItem  
+TvSelect( <hWnd>, <hItem> ) -> lSuccess  
+TvSetImageList( <hWnd>, <hImageList>, <nType> ) -> hPrevImgList  
+TxtToGTF( [<cText>], [<nAlign>], [<oFont>], [<nColor>] ) -> cGTF  
+uCharToVal( <cExpression>, <uType> ) -> <uValue>  
+uLoadStruct( <cObjFile> ) -> <oObject>  
+UnEscape( <cText> ) -> cString  
+UnZipFile( <cZipFileName>, <cFileName>, <nFileOffset>, <hWnd>, <nAction> ) -> <nRetCode>  
+UpdateWindow( <hWnd> ) -> nil  
+UToS( <nValue> ) -> nResult 
+uValBlank( <uValue> ) -> <uBlankValue>  
+VirtualRdd( ) -> oRdd  
+WaitMessage( ) -> nil 
+WaitSeconds( <nSecs> ) -> nil  
+WaitRun( <nCmdLine>, <nCmdShow> ) -> <hInstance>  
+WBrwLine( <hWnd>, <hDC>, <nRow>, <aText>, <aSizes>, <nFirstItem>, <nClrFore>, <nClrBack>, <hFont>, <lTree>, <aJustify>, <nPressed>, <nStyle>, <nFocused> ) 
+WBrwPane( <hWnd>, <hDC>, <Self>, <bLine>, <aSizes>, <nFirstItem>, <nClrFore>, <nClrBack>, <hFont>, <aJustify>, <nStyle>, <nFocused> ) -> nRowsSkipped  
+WBrwScroll( <hWnd>, <nRows>, <hFont> ) -> nil  
+WBrwSelBox( <hWnd>, <hDC>, <nRow>, <nFirstCol>, <nCurCol>, <lFocus>, <aSizes>, <hFont> ) -> nil  
+WideToAnsi( <cWideStr> ) -> <cAnsiStr>  
+WidthFLine( <hDC>, <aText>, <aFonts>, [<nLen>], [<lTrim>] ) -> nWidth 
+WindowFromPoint( <nCol>, <nRow> ) -> <hWnd>  
+WinExec( <nCmdLine>, <nCmdShow> ) -> <hInstance>  
+WinHelp( cHelpFile, nHelpType, ncAditionalData ) -> lSuccess  
+WinUser( ) -> cWinUserName  
+WndAdjbottom( <hWnd> ) -> nil  
+WndAdjClient( <hWnd>, <hTop>, <hBottom>, <hLeft>, <hRight>, <bMdiClient>, <nBevel> ) -> nil  
+WndAdjLeft( <hWnd>, <hTop>, <hBottom> ) 
+WndAdjRight( <hWnd>, <hTop>, <hBottom> ) 
+WndAdjTop( <hWnd> ) -> nil  
+WndBitmap( <hWnd> ) -> hBitmap  
+WndBottom( <hWnd> [, <nNewBottom> ] ) -> nNewBottom  
+WndBox( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) -> nil  
+WndBoxIn( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) -> nil  
+WndBoxRaised( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) -> nil  
+WndBrush( ) -> hBrush  
+WndCenter( <hWnd> [, <hWndParent>] ) -> nil  
+WndCopy( <hWnd> [, <lAll>] ) -> nil  
+WndHasScrolls( <hWnd> ) -> lHasScroll  
+WndHeight( <hWnd> [, <nNewHeight> ] ) -> nHeight  
+WndHLineRaised( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) -> nil  
+WndHRaised( <hWnd>, <hDC> ) -> nil  
+WndInset( <hWnd>, <hDC> ) 
+WndLeft( <hWnd> [, <nNewLeft> ] ) -> nNewLeft  
+WndMain( ) -> oWnd  
+WndParents( <xWnd1>, <xWnd2> ) -> lResult  
+WndPrint( <hWnd>, <hDCDestination>, <nRow>, <nCol>, <nScale> ) -> nil  
+WndRaised( <hWnd>, <hDC> ) -> nil  
+WndSetSize( <hwnd>, <nWidth>, <nHeight>, <lRepaint> ) -> lOk  
+WndTop( <hWnd> [, <nNewTop> ] ) -> nNewTop  
+WndVLineRaised( <hDC>, <nTop>, <nLeft>, <nBottom>, <nRight> ) -> nil  
+WndVRaised( <hWnd>, <hDC> ) 
+WndWidth( <hWnd> [, <nNewWidth> ] ) -> nWidth  
+WNetAddConnection( <cRemoteName>, <cPassword>, <cLocalName> ) -> nRetCode  
+WNetBrowse( <hWnd>, <nType>, <cPath> ) -> <nRetCode>  
+WNetConnectDialog( <hWndOwner>, <nType> ) -> nResult  
+WNetDelConnection( <cLocalName>, <lForce> ) -> nRetCode 
+WNetConnectDialog( <hWndOwner>, <nType> ) -> nResult  
+WNetError( ) -> <nErrorCode>  
+WNetGetConnection( <cDevice> ) -> cNetworkResource 
+WNetGetErrorText( <nError> ) -> cErrorText  
+WNetGetUser( ) -> <cUserName>  
+WorkSheet( <cPort> ) -> nil  
+WQOut( <aParams> ) -> nil  
+WriteComm( <nIdCommDev>, <cData> ) -> <nBytes>  
+WritePProString( <cSection>, <cEntry>, <cString>, <cFileName> ) -> <lSuccess>  
+WriteProfString( <cSection>, <cEntry>, <cString> ) -> <lSuccess>  
+WSAAsyncSelect( <nSocket>, <nHWnd>, <nMsg>, <nModes> ) -> nReturn  
+WSACleanUp( ) -> nError  
+WSAGetLastError( ) -> nError  
+WSAStartup( ) -> nError  
+WSay( <hWnd>, <hDC>, <nRow>, <nCol>, <cText>, <nClrFore>, <nClrBack>, <hFont>, <lPixel>, <lTransparent>, <nAlign> ) 
+WSayRect( <hWnd>, <hDC>, <nRow>, <nCol>, <cText>, <nClrFore>, <nClrBack>, <nWidth> ) 
+WScroll( <hWnd>, <nRows>, <hFont> ) -> nil  
+xPadC( <cText>, <nPixels> [, <cChar>] ) -> <cNewText>  
+xPadL( <cText>, <nPixels> [, <cChar>] ) -> <cNewText>  
+xPadR( <cText>, <nPixels> [, <cChar>] ) -> <cNewText>  
+ZipBlock( <nZipInfo> ) -> nSize  
+ZipFile( <CmdLnd>, <hWnd> ) -> nil  
+ZipMsg( <nZipInfo> ) -> cMsg  
+ZipName( <nZipInfo> ) -> cZipName  
+ZipSize( <nZipInfo> ) -> nSize  

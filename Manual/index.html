@@ -1,0 +1,445 @@
+<html>
+<head>
+<title>xDevStudio - Manual</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #333333;
+}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style7 {	font-size: 9px;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="css/estilo1.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style2 {font-size: 9px}
+.style11 {
+	font-size: 18px;
+	color: #0000CC;
+	font-weight: bold;
+}
+.style19 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style20 {
+	color: #0000CC;
+	font-weight: bold;
+}
+.style21 {color: #FF0000}
+.style22 {
+	color: #33CC00;
+	font-weight: bold;
+}
+.style23 {	color: #FF9900;
+	font-weight: bold;
+}
+.style25 {font-size: 14px; color: #0000CC; font-weight: bold; }
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+   <tr>
+      <td align="center" valign="middle" background="top.png" bgcolor="#000000"><img src="xDevStudio.png" width="500" height="236" /></td>
+   </tr>
+   <tr>
+      <td bgcolor="#FFFFFF">&nbsp;</td>
+   </tr>
+   <tr>
+      <td bgcolor="#FFFFFF"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+         <tr>
+            <td>Clique sobre o t&oacute;pico selecionado para exibir maiores informa&ccedil;&otilde;es: </td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td><span class="style11"><a name="topo"></a>Primeiros passos: <br>
+            </span>
+               
+               <a href="#um" class="azullink">1, Configurando os compiladores instalados no seu sistema </a><br>
+               <a href="#dois" class="azullink">2. Criando um novo projeto </a><br>
+               <a href="#addfiles" class="azullink">3. Adicionando ou removendo arquivos ao seu projeto </a><br>
+               <a href="#quatro" class="azullink"></a><a href="#tres" class="azullink">4. Selecionando um compilador para seu projeto </a><br>
+               <a href="#quatro" class="azullink"></a><a href="#quatro" class="azullink">5. Importando um projeto j&aacute; existente para a xDev Studio </a></td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td><span class="style11">Primeiros passos: <br>
+               </span>
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					   
+					   <tr>
+					      <td>&nbsp;</td>
+					      </tr>
+					   <tr>
+					      <td>                           
+							   <span class="style25"><a name="um"></a>1. Configurando os compiladores instalados no seu sistema </span></td>
+					      </tr>
+					   <tr>
+					      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                           <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                 <td width="5%">&nbsp;</td>
+                                 <td width="90%"><div align="justify">Um dos passos mais importantes na configura&ccedil;&atilde;o da xDev Studio &eacute; sem d&uacute;vida a configura&ccedil;&atilde;o dos compiladores instalados em seu sistema. Para acessar este tela de configura&ccedil;&atilde;o, v&aacute; no menu <strong>FERRAMENTAS &gt; CONFIGURAR COMPILADORES</strong>. Uma janela semelhante &agrave; figura abaixo ser&aacute; exibida: </div></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                       <td width="42%"><img src="imagens/Compiladores-01.gif" width="430" height="516"></td>
+                                       <td width="58%" valign="top"><table width="100%" height="516" border="0" align="center" cellpadding="10" cellspacing="0">
+                                          
+                                          
+                                          
+                                          <tr>
+                                             <td height="258"><p align="justify">Em destaque na cor <span class="style19">vermelha</span> observamos a listagem dos scripts de compila&ccedil;&atilde;o instalados na sua xDev Studio.</p></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                             <td height="258"><div align="justify">Em destaque na cor <span class="style20">azul</span> observamos uma lista dos paths j&aacute; configurados para o <em>compilador</em> espec&iacute;fico selecionado na listagem encontrada na parte superior da janela. </div></td>
+                                          </tr>
+                                          
+                                       </table></td>
+                                    </tr>
+                                 </table></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><div align="justify">Na janela de Compiladores voc&ecirc; deve selecionar qual <em>script </em>voc&ecirc; deseja configurar. Pode-se fazer isto clicando sobre o item desejado no listbox (em destaque na cor <span class="style21">vermelha</span> na imagem acima) - isto se faz necess&aacute;rio pois a xDev Studio possui diversos scripts de compila&ccedil;&atilde;o para os compiladores e ferramentas gr&aacute;ficas mais comuns tais como Clipper, Harbour, xHarbour, FiveWin, MiniGUI, hwGUI, Blinker, MinGW, Borland BCC, Microsoft Visual C entre outros. </div></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><div align="justify">Ap&oacute;s selecionar o script desejado clique sobre o bot&atilde;o <strong>Adicionar</strong> para abrir a tela <strong>Configurar Paths</strong>. Ser&aacute; exibida a janela onde deve ser colocado os diret&oacute;rios principais para compila&ccedil;&atilde;o, observe na figura abaixo os campos principais em destaque: </div></td>
+                              </tr>
+                              
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                       <td width="39%"><img src="imagens/Configurar-Paths-01.gif" width="397" height="497"></td>
+                                       <td width="61%" valign="top"><table width="100%" height="516" border="0" align="center" cellpadding="10" cellspacing="0">
+                                             <tr>
+                                                <td height="258"><p align="justify">&nbsp;</p></td>
+                                             </tr>
+                                             <tr>
+                                                <td height="258">&nbsp;</td>
+                                             </tr>
+                                       </table></td>
+                                    </tr>
+                                 </table></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><div align="justify">Nesta tela voc&ecirc; deve informar os paths onde est&atilde;o instalados os arquivos principais para uso nos seus scripts de compila&ccedil;&atilde;o.<br>
+                                   <br>
+                                 Basicamente deve-se ter em mente o seguinte: a xDev Studio configura as vari&agrave;veis de ambiente de acordo com os valores preenchidos nesta tela, portanto, &eacute; importante que voc&ecirc; configure corretamente as op&ccedil;&otilde;es existentes nesta janela. Veja quais s&atilde;o os principais campos: </div></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><table width="100%" height="0%" border="0" cellpadding="5" cellspacing="0">
+                                    <tr>
+                                       <td width="0%" height="100%" bgcolor="#EBEBEB">&nbsp;</td>
+                                       <td width="14%" valign="top" bgcolor="#EBEBEB"><strong>
+                                          <li>Vers&atilde;o do Compilador </li>
+                                       </strong></td>
+                                       <td width="85%" bgcolor="#EBEBEB"><div align="justify">Informe neste campo (destacado em <span class="style20">azul</span> na imagem acima) um t&iacute;tulo que ser&aacute; utilizado para refer&ecirc;ncia futura sobre este perfil de configura&ccedil;&atilde;o. Utilize algo bem descritivo como &quot;Clipper 5.3 e Blinker 7&quot; ou &quot;xHarbour 0.99.61 e Borland BCC&quot; ou ainda &quot;FiveWin 2.7 June 2006 &amp; BCC 5.5.1&quot;. <br>
+                                          &nbsp;</div></td>
+                                       <td width="1%" bgcolor="#EBEBEB">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="0%" height="100%">&nbsp;</td>
+                                       <td width="14%" valign="top"><strong>
+                                          <li>SET PATH</li>
+                                       </strong></td>
+                                       <td width="85%" align="left" valign="top"><div align="justify">Voc&ecirc; deve especificar neste campo os PATHs onde est&atilde;o instalados os arquivos principais para uso de seu script. Coloque neste campo separados por <em>ponto-e-virgula</em> os diret&oacute;rios onde est&atilde;o os seguintes arquivos: <br>   
+                                          &nbsp;
+                                          <li> A pasta do teu compilador, ou seja, a pasta onde est&aacute; o arquivo principal do seu compilador (conforme apropriado) que pode ser CLIPPER.EXE ou o HARBOUR.EXE. Geralmente incluimos a pasta <em>C:\CLIP53\BIN</em> ou <em>C:\XHARBOUR\BIN</em> por exemplo, indicando assim onde estar&aacute; o aplicativo utilizado para o processo de compila&ccedil;&atilde;o de seus futuros projetos. <br>
+                                                &nbsp;</li>
+                                          <li> Quando apropriado &eacute; necess&aacute;rio informar o caminho completo da pasta BIN do teu linkeditor (Borland BCC / BLINKER / MinGW / Pelles C ou MSVC) exemplo: <em>C:\BCC55\BIN</em> ou <em>C:\MINGW\BIN</em>.<br>
+                                                &nbsp;</li>
+                                          <li>
+                                             No caso das LIBs gr&aacute;ficas &eacute; necess&aacute;rio informar neste campo a PASTA PRINCIPAL ou PASTA RAIZ onde voc&ecirc; instalou os arquivos, como por exemplo: C:\MINIGUI ou C:\FWH. <br>
+&nbsp;                                          <br>
+                                          Para incluir mais de um PATH voc&ecirc; pode utilizar o assistente de <strong>Diret&oacute;rios</strong> clicando no bot&atilde;o destacado na cor <span class="style22">verde</span> na imagem acima. Ap&oacute;s configurar as pastas corretas a xDev Studio ir&aacute; mostrar na parte inferior da janela (destacado em <span class="style19">vermelho</span> na imagem acima) a pasta onde est&aacute; o compilador e a vers&atilde;o do mesmo, bem como a vers&atilde;o do teu linkeditor e ferramenta gr&aacute;fica (se houver). <br>
+                                          <br>
+                                          DICA: 
+                                          Para incluir neste campo o seu valor <em>atual</em> de SET PATH conforme configurado em seu AUTOEXEC.BAT ou AUTOEXEC.NT, use a express&atilde;o %PATH%; esta mesma dica vale para os campos SET INCLUDE, SET LIB e SET OBJ com as constantes %INCLUDE%, %LIB% e %OBJ% respectivamente. <br>
+                                          &nbsp;</li>
+                                       </div></td>
+                                       <td width="1%" align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="0%" height="100%" bgcolor="#EBEBEB">&nbsp;</td>
+                                       <td width="14%" valign="top" bgcolor="#EBEBEB"><li><strong></strong><strong>SET INCLUDE </strong></li></td>
+                                       <td width="85%" bgcolor="#EBEBEB"><div align="justify">Este campo deve conter todos os paths de pesquisa que ser&atilde;o necess&aacute;rios na vari&agrave;vel de ambiente SET INCLUDE para o processo de compila&ccedil;&atilde;o de seu aplicativo. Lembre-se que Isto se aplica tanto para o <em>compilador</em> como par<em>a o linkeditor;</em> sendo assim normalmente colocamos algo como <em>C:\CLIP53\INCLUDE</em> ou <em>C:\HARBOUR\INCLUDE;C:\BORLAND\BCC55\INCLUDE;C:\FWH\INCLUDE</em>.<br>&nbsp;</div></td>
+                                       <td width="1%" bgcolor="#EBEBEB">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="0%" height="100%">&nbsp;</td>
+                                       <td width="14%" valign="top"><li><strong></strong><strong>SET LIB </strong></li></td>
+                                       <td width="85%"><div align="justify">Assim como o campo anterior, deve conter os PATHs de pesquisa dos arquivos *.LIB necess&aacute;rios para compila&ccedil;&atilde;o e linkedi&ccedil;&atilde;o do seu aplicativo. Geralmente indicamos aqui o C:\CLIP53\LIB ou C:\HARBOUR\LIB;C:\BCC55\LIB\PSDK;C:\BCC55\LIB. Quando houver necessidade este campo tamb&eacute;m deve incluir assim como o campo anterior a pasta LIB de sua ferramenta gr&aacute;fica. <br>
+                                          &nbsp; </div></td>
+                                       <td width="1%">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="0%" height="100%" bgcolor="#EBEBEB">&nbsp;</td>
+                                       <td width="14%" valign="top" bgcolor="#EBEBEB"><li><strong>SET OBJ </strong></li></td>
+                                       <td width="85%" bgcolor="#EBEBEB"><div align="justify">Este campo deve conter quando necess&aacute;rio as pastas de pesquisa dos arquivos *.OBJ necess&aacute;rios para compila&ccedil;&atilde;o e linkedi&ccedil;&atilde;o do seu aplicativo.<br>
+&nbsp; </div></td>
+                                       <td width="1%" bgcolor="#EBEBEB">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="0%" height="100%">&nbsp;</td>
+                                       <td width="14%" valign="top"><li><strong>Defines espec&iacute;ficas ... </strong></li></td>
+                                       <td width="85%"><div align="justify">&nbsp;Permite informar diretrivas #DEFINE para uso espec&iacute;fico deste compilador. <br>
+                                             &nbsp;</div></td>
+                                       <td width="1%">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                       <td height="100%" bgcolor="#EBEBEB">&nbsp;</td>
+                                       <td valign="top" bgcolor="#EBEBEB"><li><strong>Checar sub-pastas ... </strong></li></td>
+                                       <td valign="top" bgcolor="#EBEBEB"><div align="justify">A op&ccedil;&atilde;o <em>Checar sub-pastas automaticamente </em> (conforme destacado na imagem acima em <span class="style23">amarelo</span>) determina se logo ap&oacute;s ao ser preenchido o valor de SET PATH, a xDev Studio deve preencher automaticamente pelos valores de SET INCLUDE,  SET LIB e SET OBJ de acordo com a estrutura das pastas informadas em SET PATH. <br>
+                                             &nbsp;</div></td>
+                                       <td bgcolor="#EBEBEB">&nbsp;</td>
+                                    </tr>
+                                    
+                                 </table></td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td><div align="justify">Ap&oacute;s configurar corretamente as pastas do seu compilador clique em <strong>Ok</strong> a janela atual ser&aacute; fechada e ser&aacute; exibida janela anterior de configura&ccedil;&atilde;o dos compiladores. Voc&ecirc; pode ter v&aacute;rios compiladores instalados e de vers&otilde;es diferentes para o mesmo script. <br>
+                                  <br>
+                                Observe na figura abaixo que para o mesmo script foram cadastrados 4 (quatro) vers&otilde;es diferentes do mesmo compilador: </div></td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="39%"><img src="imagens/Compiladores-02.png" width="430" height="516"></td>
+                                    <td width="61%" valign="top"><table width="100%" height="516" border="0" align="center" cellpadding="10" cellspacing="0">
+                                        <tr>
+                                          <td height="258"><p align="justify">&nbsp;</p></td>
+                                        </tr>
+                                        <tr>
+                                          <td height="258">&nbsp;</td>
+                                        </tr>
+                                    </table></td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td><div align="justify">Ap&oacute;s configurar adequadamente os paths dos seus compiladores voc&ecirc; j&aacute; poder&aacute; vincular nos seus projetos os devidos <em>perfis</em> de configura&ccedil;&atilde;o desejados. </div></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><a href="#topo" class="azullink">Subir</a></td>
+                              </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td>&nbsp;</td>
+                              </tr>
+                              
+                              
+                           </table></td>
+                           </tr>
+                     </table></td>
+					      </tr>
+					   <tr>
+					      <td class="style25"><a name="dois" id="dois"></a>2. Criando um novo projeto</td>
+					      </tr>
+					   <tr>
+					      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                           <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td><div align="justify">Para criar um novo projeto na xDev Studio v&aacute; no menu <strong>ARQUIVO &gt; NOVO &gt; PROJETO</strong> e salve o seu projeto em um local de sua prefer&ecirc;ncia. Ap&oacute;s isto utilize o menu <strong>PROJETO</strong> para adicionar ou remover arquivos em seu projeto aberto atualmente. </div></td>
+                                 </tr>
+                              <tr>
+                                 <td>&nbsp;</td>
+                                 <td><a href="#topo" class="azullink">Subir</a></td>
+                              </tr>
+                                 <tr>
+                                    <td width="5%">&nbsp;</td>
+                                    <td width="90%">&nbsp;</td>
+                                 </tr>
+                           </table></td>
+                        </tr>
+                     </table></td>
+					      </tr>
+					   <tr>
+					      <td class="style25"><a name="addfiles" id="addfiles"></a>3. Adicionando ou Removendo arquivos ao seu projeto
+                        </ol></td>
+					      </tr>
+					   <tr>
+					   <tr>
+					      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                           <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td><div align="justify">Com o devido projeto aberto basta clicar em <strong>PROJETO &gt; ADICIONAR ARQUIVOS</strong> para incluir outros m&oacute;dulos ou utilize a op&ccedil;&atilde;o <strong>PROJETO &gt; REMOVER</strong> para excluir algum m&oacute;dulo j&aacute; existente de seu projeto. </div></td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#topo" class="azullink">Subir</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td width="5%">&nbsp;</td>
+                                    <td width="90%">&nbsp;</td>
+                                 </tr>
+                           </table></td>
+                        </tr>
+                     </table></td>
+					   <tr>
+					   <tr>
+					      <td class="style25"><a name="tres" id="tres"></a>4. Selecionando um compilador para seu projeto
+                        </ol></td>
+					      </tr>
+					   <tr>
+					      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                           <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td><div align="justify">Com o projeto aberto v&aacute; no menu <strong>PROJETO &gt; PROPRIEDADES</strong> e ap&oacute;s isto no painel de op&ccedil;&otilde;es localizado &agrave; esquerda da janela, clique em <strong>SELECIONAR COMPILADORES</strong>.<br>
+                                          <br>
+                                       Na guia que se surge, selecione um tipo de compilador na primeira lista denominada &quot;Scripts de compiladores instalados&quot; que aparecer&aacute; no topo direito da mesma janela. Feito 
+                                       isto, deve-se selecionar na segunda lista  logo abaixo, em quais vers&otilde;es dos compiladores 
+                                       instalados voc&ecirc; deseja que seu projeto seja compilado. Ap&oacute;s selecionar uma vers&atilde;o desejada para compilar seu projeto deve-se marcar qual &eacute; ser&aacute; a vers&atilde;o <em>default</em>
+                                       de compila&ccedil;&atilde;o; fazemos isto clicando na vers&atilde;o desejada do compilador e ap&oacute;s isto selecionando o item destacado em vermelho &quot;Usar este script durante o processo de desenvolvimento&quot; </div>
+                                       <p>Depois disto, voc&ecirc; j&aacute; poder&aacute; acessar o item &quot;Configurar compiladores selecionados&quot;
+                                          do lado esquerdo do painel para configurar os detalhes de cada compilador.</p></td>
+                                 </tr>
+                                 <tr>
+                                    <td width="5%">&nbsp;</td>
+                                    <td width="90%"><a href="#topo" class="azullink">Subir</a></td>
+                                 </tr>
+                           </table></td>
+                        </tr>
+                     </table></td>
+					      </tr>
+					   <tr>
+					      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                           <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tr>
+                                    <td width="5%">&nbsp;</td>
+                                    <td width="90%">&nbsp;</td>
+                                 </tr>
+                           </table></td>
+                        </tr>
+                     </table></td>
+					      </tr>
+					   <tr>
+					      <td class="style25"><a name="quatro" id="quatro"></a>5. Importando um projeto j&aacute; existente para a xDev Studio </td>
+					      </tr>
+					   <tr>
+					      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                           <td width="40%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td><div align="justify">Se estiver desejando importar um projeto de uma vers&atilde;o antiga da pr&oacute;pria xDev (tal como a 0.33 ou 0.34) basta apenas ir em <strong>ARQUIVO &gt; ABRIR</strong> e selecionar o arquivo de projeto criado com sua vers&atilde;o antiga. Ap&oacute;s isto basta ler com aten&ccedil;&atilde;o as orienta&ccedil;&otilde;es que a xDev Studio ir&aacute; lhe exibir na tela e pronto! </div></td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td>Para importar a listagem de arquivos de um projeto j&aacute; existente, mas criado com outra ferramenta, execute os seguintes passos:</td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td width="5%">&nbsp;</td>
+                                    <td width="90%"><div align="justify">Com um projeto aberto clique em <strong>ARQUIVO &gt; IMPORTAR</strong> e selecione o formato do arquivo que deseja importar. Ap&oacute;s fazer isto ser&aacute; exibida a janela &quot;Importar projeto do...&quot; onde voc&ecirc; dever&aacute; selecionar o projeto que cont&eacute;m os nomes dos arquivos para importa&ccedil;&atilde;o. Ap&oacute;s selecionar o arquivo original a xDev Studio importar a lista com os nomes dos arquivos de seu projeto antigo e ir&aacute; <em>adicionar</em> ao seu projeto atualmente aberto. </div></td>
+                                 </tr>
+                                 <tr>
+                                    <td>&nbsp;</td>
+                                    <td><a href="#topo" class="azullink">Subir</a></td>
+                                 </tr>
+                                 
+                           </table></td>
+                        </tr>
+                     </table></td>
+					      </tr>
+					   <tr>
+					      <td>&nbsp;</td>
+					      </tr>
+					</table>               </td>
+         </tr>
+      </table></td>
+   </tr>
+   <tr>
+      <td bgcolor="#FFFFFF">&nbsp;</td>
+   </tr>
+   <tr>
+      <td bgcolor="#000000"><div align="center" class="style1"><BR>&nbsp;<span class="style7">Copyright &copy; 2003-2006 WebNet do Brasil Inform&aacute;tica. Todos os direitos s&atilde;o reservados.</span><br />
+            <span class="style2">Todas as marcas mencionadas neste site, s&atilde;o de propriedade de seus respectivos detentores. <a href="notaslegais.html" class="whitelink">Saiba mais, clicando aqui.</a></span><BR>&nbsp;</div></td>
+   </tr>
+</table>
+</body>
+</html>

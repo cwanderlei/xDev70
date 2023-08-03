@@ -1,0 +1,55 @@
+!
+!text=SQL Connect
+!#Conectar no servidor SQL com parâmetros
+!\%1=Edittext,Servidor/Host:,0,0,0,0,Localhost  
+!\%2=Edittext,DataBase:,0,0,0,0,  
+!\%3=Edittext,Usuário:,0,0,0,0,root  
+!\%4=Edittext,Senha de Acesso:,0,0,0,0,  
+!\%5=DropDown,Flags para conexão:,,,,,SQL_NO_WARNING|SQL_NO_ERROR  
+!\%6=DropDown,Driver RDD:,,,,,MySQL|PostgreSQL  
+SQL CONNECT ON "\%1" ;  
+     DATABASE "\%2";  
+     USER "\%3";  
+     PASSWORD "\%4";  
+     OPTIONS \%5;  
+     LIB "\%6"  
+!
+!text=SQL Execute
+!#Execução direta de um SQL no servidor
+SQL EXECUTE "\<"  
+!
+!text=SQL Translate PATH
+!#Especifica o tipo de conversao no PATH dos arquivos
+!\%1=ListBox,Tipo de Conversao:,0,0,0,0,tpFileName|tpFullPath|tpFullName|tpFullNamePath  
+SQL TRANSLATE PATH TO \%1  
+!
+!text=SQL Translate CASE
+!#Detemina o tipo de conversão no caso de maiúsc/minusc para os nomes de arquivos
+!\%1=ListBox,Tipo de Conversao:,0,0,0,0,tcNone|tcUpperCase|tcLowerCase  
+SQL TRANSLATE CASE TO \%1  
+!
+!text=SQL Bloco de Transação
+!#Inicia um bloco de transação SQL.
+BEGIN TRANSACTION  
+  
+	/* Insira seus comandos SQL abaixo */  
+	\<  
+	COMMIT  
+  
+END TRANSACTION  
+!
+!text=SQL Bloco de Transação (protegido)
+!#Inicia um bloco de transação SQL com proteção
+BEGIN TRANSACTION  
+	TRY  
+		/* Insira seus comandos SQL abaixo */  
+		\<  
+		COMMIT  
+  
+	CATCH oError  
+		/* Ocorreu algum erro? Enviamos um ROLLBACK! */  
+	   SQL ROLLBACK  
+		/* E avisamos ao usuario o motivo do erro!*/  
+		Alert( oError:description )  
+	End  
+END TRANSACTION  

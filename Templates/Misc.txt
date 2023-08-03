@@ -1,0 +1,34 @@
+!
+!text=Cabeçalho de Funções
+!#Template para criação de uma função genérica
+!\%1=Edittext,Nome da função,5,0,120,12,\%G  
+!\%2=Edittext,Finalidade,5,0,120,12  
+!\%3=Edittext,Parâmetros,5,0,120,12  
+!\%4=Edittext,Retorno,5,0,120,12  
+/*  
+ * \%2  
+ * \%D - \%T  
+ */  
+FUNCTION \%1( \%3 )  
+	LOCAL \<  
+  
+	RETURN \%4  
+!
+!text=Cabeçalho de Programas
+!#Cabeçalho genérico para novos programas
+!\%1=EditText,Autor,,,,,\%W
+!\%2=Edittext,Sintaxe,5,0,120,12  
+/******************************************************************************  
+ * Sistema .....: \%J  
+ * Programa ....: \%F  
+ * Autor .......: \%1 
+ * Sintese .....: \%2  
+ * Data ........: \%D às \%T  
+ * Revisado em .: \%D às \%T  
+ ******************************************************************************/  
+#include 'common.ch'  
+  
+FUNCTION \%N()  
+   LOCAL \<  
+  
+   RETURN nil  

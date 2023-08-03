@@ -1,0 +1,19 @@
+<!--
+### Standard xDev Config - Layout v1.5 #########
+#                                              #
+# Created @ 21/8/2006 11:13:59                 #
+#                                              #
+# xDevStudio Project - xdev@kssoftware.com.br  #
+################################################
+-->
+<compiler name="Generic Script">
+   <option icon="Icons.icl,10">
+   <option source="GenericScript.xCompiler.prg">
+   <option onbuild="OnBuild">
+
+   <parameters>
+      /* Opçoes para executar */
+      <option fCmd="Comando externo para compilação"        select="#FILENAME" hint="Especifica o nome do arquivo que será executado para compilar e linkar este projeto.">
+      <option fStyle="Exibir processo?"       default="Não" select="Sim,Não"   hint="Determina se a tela do DOS deve permanecer aberta durante o processo de compilação">
+   </parameters>
+</compiler>
